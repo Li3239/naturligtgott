@@ -3,6 +3,7 @@
 <?php get_header(); ?>
 <!-- content -->
 <main class="content">
+<h1>Helooo Posts</h1>
     <?= the_title() ?>
     <?= the_content() ?>
 
