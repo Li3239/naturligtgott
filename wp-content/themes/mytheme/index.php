@@ -22,6 +22,7 @@ get_header();
 ?>
 
 <main class="content">
+    <h1>Helooo</h1>
     <?= the_title() ?>
     <?= the_content() ?>
 </main>
