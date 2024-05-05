@@ -4,6 +4,11 @@
     <meta charset="UTF-8">
     
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script
+      src="https://kit.fontawesome.com/f14b07e4b8.js"
+      crossorigin="anonymous"
+    ></script>
     
     <title><?=get_option('blogname');?></title>
     <?php wp_head(); ?>
@@ -47,4 +52,9 @@
         <a href=""><h4>EKOLOGIST</h4></a>
         <a href=""><h4>HÅLLBARA PRODUKTER</h4></a>
         <a href=""><h4>REA</h4></a>
+    </div>
+    <div class="usp">
+        <span><i class="fa-solid fa-truck"></i>Gratis leverens över 300SEK</span>
+        <span><i class="fa-regular fa-face-smile"></i>30 dagar retur</span>
+        <span><i class="fa-regular fa-credit-card"></i>Snabbt leverens</span>
     </div>
