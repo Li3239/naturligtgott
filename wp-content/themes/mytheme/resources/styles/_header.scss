@@ -1,0 +1,71 @@
+header {
+  padding: 1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  div {
+    img {
+      width: 10rem;
+    }
+    nav ul {
+      display: flex;
+      flex-direction: row;
+      li {
+        padding: 0 0.5rem;
+        font-size: 1.1rem;
+
+        a {
+          color: rgb(34, 34, 34);
+          font-weight: 400;
+        }
+      }
+
+      /* Hide the text visually */
+      .menu-item.main_search a,
+      .menu-item.main_wishlist a,
+      .menu-item.main_account a,
+      .menu-item.main_cart a {
+        font-size: 0; /* Hide the text */
+        line-height: 30px; /* Hide the text */
+        text-indent: -9999px; /* Move the text off-screen */
+        position: relative; /* Ensure relative positioning */
+        display: inline-block; /* Ensure inline-block display */
+        vertical-align: middle; /* Align vertically */
+        padding: 0 1rem; /* Reset padding */
+        margin: 0; /* Reset margin */
+      }
+
+      /* Set the icon as a background */
+      .menu-item.main_search a::before,
+      .menu-item.main_wishlist a::before,
+      .menu-item.main_account a::before,
+      .menu-item.main_cart a::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 1.5rem; /* Adjust the width of the icon */
+        height: 1.5rem; /* Adjust the height of the icon */
+        background-repeat: no-repeat;
+        background-size: contain;
+      }
+
+      .menu-item.main_search a::before {
+        background-image: url("../images/search.png");
+      }
+
+      .menu-item.main_wishlist a::before {
+        background-image: url("../images/heart.png");
+      }
+
+      .menu-item.main_account a::before {
+        background-image: url("../images/user.png");
+      }
+
+      .menu-item.main_cart a::before {
+        background-image: url("../images/cart.png");
+      }
+    }
+  }
+}

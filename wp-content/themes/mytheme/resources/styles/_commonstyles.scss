@@ -1,10 +1,17 @@
-body{
-    margin: 0;
-    padding: 0;
-    background-color: azure;
-    color: chartreuse;
-    .content{
-        background-color: rgb(2, 241, 241);
-        color: rgb(31, 59, 2);
-    }
+body {
+  margin: 0;
+  padding: 0;
+  background-color: azure;
+  color: chartreuse;
+  font-family: "Roboto", sans-serif;
+  .content {
+    background-color: rgb(2, 241, 241);
+    color: rgb(31, 59, 2);
+  }
+  li {
+    list-style: none;
+  }
+  a {
+    text-decoration: none;
+  }
 }
