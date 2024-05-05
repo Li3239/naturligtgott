@@ -1,0 +1,90 @@
+.best-sellers-h3 {
+  margin: 2rem 0;
+}
+
+.wpcp-carousel-section {
+  margin: 0 0 2rem !important;
+
+  .wpcp-prev-button i,
+  .wpcp-next-button i {
+    color: rgb(68, 68, 68) !important;
+    font-size: 3rem;
+  }
+  .wpcp-prev-button i {
+    left: 5px !important;
+  }
+  .wpcp-next-button i {
+    right: 10px !important;
+  }
+  .wpcp-single-item {
+    background-color: white;
+    padding-bottom: 0;
+    text-align: left;
+
+    .wpcp-product-price,
+    .wpcp-product-title {
+      text-align: left !important;
+      padding: 0.5rem 0 !important;
+      height: 3rem;
+    }
+
+    .wpcp-product-price span {
+      color: gray;
+      text-transform: uppercase;
+    }
+    .wpcp-cart-button p a {
+      width: 100%;
+      margin-bottom: 1rem;
+      border-radius: 0;
+      background: $green !important;
+      color: white !important;
+    }
+  }
+  .wpcp-swiper-dots {
+    display: none !important;
+  }
+}
+
+.hero {
+  padding: 0 4rem !important;
+  margin: 0 -2rem;
+
+  h3.hero-text {
+    margin: 0;
+    color: #121212;
+    font-weight: 500;
+  }
+  p {
+    line-height: 2rem;
+  }
+}
+
+.blog-container {
+  margin: 1.5rem 0;
+  padding: 1rem 2rem !important;
+
+  .blog-image-div {
+    padding-top: 2rem;
+  }
+}
+
+.blog-article-container {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+   margin-bottom: 2rem; 
+
+  li {
+    width: 15%;
+    flex-grow: 1;
+
+    h2 {
+      height: 4rem;
+      margin-bottom: 2rem;
+    }
+    p {
+      line-height: 1.3rem;
+      padding-bottom: 1rem;
+    }
+  }
+}

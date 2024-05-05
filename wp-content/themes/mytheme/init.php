@@ -1,5 +1,7 @@
 <?php
 
+require_once('hooks.php');
+
 function mytheme_enqueue()
 {
     $theme_directory_uri = get_template_directory_uri();

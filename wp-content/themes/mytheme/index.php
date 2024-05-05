@@ -22,8 +22,12 @@ get_header();
 ?>
 
 <main class="content">
-    <h1>Helooo</h1>
-    <?= the_title() ?>
+    <?php
+        if (!is_front_page()) {
+            echo the_title();
+            }
+    ?>
+
     <?= the_content() ?>
 </main>
 
