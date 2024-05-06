@@ -1,7 +1,7 @@
 <footer>
     <section class="container">
         <div class="column-address">
-            <a href="">
+            <a href="/">
                 <img class="footer-image" src="<?= get_option('store_footer_image'); ?>" />
             </a>
             <div class="footer-info">
@@ -43,6 +43,14 @@
             );
             wp_nav_menu($menu);
             ?>
+        </div>
+    </section>
+
+    <!-- only for mobilephone mode -->
+    <section class="container-copyright">
+        <div class="site-info">
+            <span><?= get_option('store_footer_name') . get_option('store_footer_copyright'); ?></span>
+            <span><?= get_option('store_footer_org_number'); ?></span>
         </div>
     </section>
 </footer>
