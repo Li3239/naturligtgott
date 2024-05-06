@@ -32,3 +32,19 @@ body {
   line-height: 22px;
   letter-spacing: -0.02em;
 }
+
+@mixin footer-contact-product-mobile-style {
+  font-family: Roboto;
+  font-size: 14px;
+  font-weight: 400; // Regular
+  line-height: 22px;
+  letter-spacing: -0.02em;
+}
+
+@mixin footer-store-info-mobile-style {
+  font-family: Roboto;
+  font-size: 10px;
+  font-weight: 400; // Regular
+  line-height: 22px;
+  letter-spacing: -0.02em;
+}
