@@ -18,10 +18,10 @@ function mytheme_init()
     $menu = array(
         'main_menu' => 'main_menu',
         'main_menu_icons' => 'main_menu_icons',
-        'footer_social_media' => 'footer_social_media',
-        'footer_shopping' => 'footer_shopping',
-        'footer_links' => 'footer_links',
-        'footer_blog' => 'footer_blog'
+        'footer_company_info' => 'footer_company_info',
+        'footer_contact' => 'footer_contact',
+        'footer_product' => 'footer_product',
+        'footer_social_media' => 'footer_social_media'
     );
     register_nav_menus($menu);
 }
