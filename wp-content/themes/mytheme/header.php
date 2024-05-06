@@ -9,6 +9,8 @@
       src="https://kit.fontawesome.com/f14b07e4b8.js"
       crossorigin="anonymous"
     ></script>
+
+    
     
     <title><?=get_option('blogname');?></title>
     <?php wp_head(); ?>
@@ -41,16 +43,16 @@
                 'container_class' => 'menu'
             );
             
-            wp_nav_menu($menu); ?> 
+            wp_nav_menu($menu); ?>  
         </div>
        
     </header>
     <div class="subheader">
         <a href=""><h4>ALLA PRODUKTER</h4></a>
         <a href=""><h4>BÄST SÄLJARE</h4></a>
-        <a href=""><h4>NYHETER</h4></a>
-        <a href=""><h4>EKOLOGIST</h4></a>
-        <a href=""><h4>HÅLLBARA PRODUKTER</h4></a>
+        <a href="" class="nyheter-cat"><h4>NYHETER</h4></a>
+        <a href="" class="eko-cat"><h4>EKOLOGIST</h4></a>
+        <a href="" class="sustain-cat"><h4>HÅLLBARA PRODUKTER</h4></a>
         <a href=""><h4>REA</h4></a>
     </div>
     <div class="usp">
