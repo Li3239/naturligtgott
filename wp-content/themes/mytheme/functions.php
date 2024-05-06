@@ -2,6 +2,7 @@
 
 require_once(get_template_directory() . "/vite.php");
 require_once(get_template_directory() . "/init.php");
+require_once(get_template_directory() . "/settings.php");
 
 if (!defined('ABSPATH')) {
     exit;
