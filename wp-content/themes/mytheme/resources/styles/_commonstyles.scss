@@ -20,3 +20,19 @@ body {
     transform: scale(1.1);
   }
 }
+
+@mixin footer-store-info-style {
+  font-family: Roboto;
+  font-size: 25px;
+  font-weight: 400; // Regular
+  line-height: 40px;
+  letter-spacing: -0.02em;
+}
+
+@mixin footer-contact-product-style {
+  font-family: Roboto;
+  font-size: 25px;
+  font-weight: 400; // Regular
+  line-height: 22px;
+  letter-spacing: -0.02em;
+}
