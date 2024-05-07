@@ -24,3 +24,4 @@ function custom_modify_homepage_query( $query ) {
     }
 }
 add_action( 'pre_get_posts', 'custom_modify_homepage_query' );
+
