@@ -8,32 +8,58 @@
  */
 
 get_header();
-
-// Hämta de senaste 10 inläggen
-$posts = get_posts();
-
-// Visa inläggen även om det inte finns några
 ?>
-<div class="posts-list">
-    <?php foreach ( $posts as $post ) : setup_postdata( $post ); ?>
-        <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-            <?php if ( has_post_thumbnail() ) : ?>
-                <div class="post-thumbnail">
-                    <a href="<?php the_permalink(); ?>"><?php the_post_thumbnail(); ?></a>
-                </div>
-            <?php endif; ?>
-            <header class="entry-header">
-                <h2 class="entry-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
-            </header><!-- .entry-header -->
-            <div class="entry-content">
-                <?php the_excerpt(); ?>
-            </div><!-- .entry-content -->
-        </article><!-- #post-<?php the_ID(); ?> -->
-    <?php endforeach; ?>
-</div><!-- .posts-list -->
+
+<main id="primary" class="content-area">
+    <div class="container">
+        <div class="post-list">
+            <?php
+            // Hämta alla inlägg
+            $args = array(
+                'post_type'      => 'post',
+                'posts_per_page' => -1,
+            );
+            $posts_query = new WP_Query( $args );
+
+            // Loopa igenom inläggen
+            if ( $posts_query->have_posts() ) :
+                while ( $posts_query->have_posts() ) :
+                    $posts_query->the_post();
+                    ?>
+                    <article id="post-<?php the_ID(); ?>" <?php post_class( 'post-item' ); ?>>
+                        <?php if ( has_post_thumbnail() ) : ?>
+                            <div class="post-thumbnail">
+                                <?php the_post_thumbnail( 'medium' ); ?>
+                            </div>
+                        <?php endif; ?>
+                        <div class="post-content">
+                            <header class="entry-header">
+                                <h2 class="entry-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+                                
+                            </header><!-- .entry-header -->
+                            <div class="entry-content">
+                                <?php the_excerpt(); ?>
+                            </div><!-- .entry-content -->
+                            <div class="entry-meta">
+                                    <span class="posted-on">Publicerat <?php echo get_the_date(); ?></span>
+                                    <span class="byline">av <?php the_author_posts_link(); ?></span>
+                                </div>
+                        </div><!-- .post-content -->
+                    </article><!-- #post-<?php the_ID(); ?> -->
+                    <?php
+                endwhile;
+                wp_reset_postdata();
+            else :
+                // Om inga inlägg hittades
+                ?>
+                <p><?php esc_html_e( 'Inga inlägg hittades.', 'your-theme-textdomain' ); ?></p>
+                <?php
+            endif;
+            ?>
+        </div><!-- .post-list -->
+    </div><!-- .container -->
+</main><!-- #primary -->
 
 <?php
-// Återställ globala postdata
-wp_reset_postdata();
-
 get_footer();
+?>

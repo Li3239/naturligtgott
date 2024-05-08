@@ -1,0 +1,95 @@
+.single-blogpost{
+    position: relative;
+    .wp-block-heading{
+        grid-row: 1; 
+        margin: 4rem 2rem;
+        width: 100%;
+    }
+    .wp-block-latest-posts{
+        grid-row: 2;
+        grid-column: 1;
+        width: 100%;
+        position: absolute;
+        left:60%;
+        top: 20%;
+        margin: 0rem 2rem;
+        li{
+            padding: 10px 20px ;
+            border: 1px solid rgb(237, 235, 235);
+            width: 20vw;
+            margin: 10px 10px;
+            border-radius: 5px;
+            background-color:white;
+            a{
+                text-decoration: none;
+                color: rgb(34, 34, 34);
+               
+            }
+        }
+
+    }
+    .wp-block-media-text{
+        display: flex !important;
+        flex-direction: column;
+        width: 60%;
+        flex-wrap: wrap;
+        margin-bottom: 1%;
+        .wp-block-media-text__media{
+            width: 50vw;
+            height: 50vh;
+            margin-bottom: 4rem;
+            
+        }
+        .wp-block-media-text__content{
+            h4{
+                margin: 0;
+            }
+        }
+    }
+    #jetpack-sharing-serivces-list{
+        margin: 0rem 4.9rem;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .single-blogpost{
+        overflow-x: hidden;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        .wp-block-heading{
+            margin-bottom: 3%;
+            font-size: 2em;
+        }
+        .wp-block-latest-posts {
+            display: none;
+         }
+
+    
+    .wp-block-media-text{
+        display: flex !important;
+        flex-direction: column;
+        width: 100% !important;
+        flex-wrap: wrap;
+        margin-bottom: 1%;
+        .wp-block-media-text__media{
+            width: 90vw !important;
+            height: 1% !important;
+            margin-bottom: 15rem !important; 
+            
+        }
+        .wp-block-media-text__content{
+            h4{
+                margin: 0;
+                font-size: 1em;
+                
+            }
+        }
+    }
+    #jetpack-sharing-serivces-list{
+        display: flex;
+        justify-content: left;
+        margin: 0rem 0rem !important;
+    }
+}
+}

@@ -1,19 +1,72 @@
-.posts-list{
-    display: flex;
-    justify-content: space-between;
-    flex-direction: row;
-    flex-wrap: wrap;
+
+.content-area{
+    margin: 0 2rem;
+    padding-top: 5%;
+.container{
+    
+.post-list{
     width: 100%;
+    overflow-x: none;
+    display: flex;
+    justify-content:left;
+    flex-direction: row; 
+    flex-wrap: wrap;
+   
     margin: 0 2rem;
     article{
-        width: 30%;
+        /* border: 1px solid rgb(150, 150, 150); */
+        background-color: white;
+        width: 20%;
+        margin: 1%;
+        display:flex;
+        flex-direction: column;
+        flex-wrap: wrap;
         .post-thumbnail{
-            a{
-                img{
-                    width: 200px;
-                    height: 200px;
+            width: 100%;
+            .wp-post-image{
+                    width: 100%;
+                   
                 }
+        
+        }
+        .post-content{
+            .entry-header{
+                height: 10vh;
+                flex-direction: column;
+                justify-content: left;
+                align-items: left;
+               
+                .entry-title{
+                    height: 15vh;
+                   a{
+                    color: #121212;
+                   }
+                }
+                
+            }
+            .entry-content{
+                padding: 5%;
+                p{
+                    color: #121212;
+                    font-family: "Roboto", sans-serif;
+                }
+            }
+            .entry-meta{
+                 padding:5%;   
+                font-size: 12px;
+                /* display: flex;
+                justify-content:space-between; */
+               /*  align-items: left; */
+                span{
+                    margin-right: 5px;
+                    a{
+                        text-decoration: none;
+                        color: black;
+                    }
+                }
+
             }
         }
     }
+}}
 }

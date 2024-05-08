@@ -21,7 +21,7 @@ if (!defined('ABSPATH')) {
 get_header();
 ?>
 
-<main class="content">
+<main class="<?php echo is_single() ? 'single-blogpost' : (is_checkout() ? 'content-checkout' : (is_front_page() ? 'content' : 'content')); ?>">
     <?php
         if (!is_front_page()) {
             echo the_title();

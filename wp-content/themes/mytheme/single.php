@@ -2,8 +2,8 @@
 
 <?php get_header(); ?>
 <!-- content -->
-<main class="content">
-    <?= the_title() ?>
+<main class="single-blogpost">
+   <!--  <?= the_title() ?> -->
     <?= the_content() ?>
 
 </main>
