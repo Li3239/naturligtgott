@@ -1,8 +1,15 @@
 <footer>
+    <?php
+    // get the "store_footer_image" from settings in dashboard, or use placeholder image
+    $store_image = get_option('store_footer_image');
+    if (!$store_image) {
+        $store_image = get_template_directory_uri() . '/resources/images/placeholder.png';
+    }
+    ?>
     <section class="container">
         <div class="column-address">
             <a href="/">
-                <img class="footer-image" src="<?= get_option('store_footer_image'); ?>" />
+                <img class="footer-image" src="<?= esc_url($store_image); ?>" alt="Store Image" />
             </a>
             <div class="footer-info">
                 <span><?= get_option('store_footer_name'); ?></span>

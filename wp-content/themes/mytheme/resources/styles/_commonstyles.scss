@@ -52,3 +52,21 @@ body {
   line-height: 22px;
   letter-spacing: -0.02em;
 }
+
+@mixin shop-hero-title-font-style {
+  font-family: Roboto;
+  font-size: 38px;
+  font-weight: 700;
+  line-height: 45px;
+  letter-spacing: 0em;
+  color: $primary-font-color;
+}
+
+@mixin page-not-found-h2-style {
+  font-family: Roboto;
+  font-size: 50px;
+  font-weight: 300;
+  line-height: 50px;
+  letter-spacing: 0em;
+  text-align: left;
+}
