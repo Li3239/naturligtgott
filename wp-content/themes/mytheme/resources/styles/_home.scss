@@ -55,6 +55,14 @@
   padding: 0 4rem !important;
   margin: 0 -2rem;
 
+  .wp-block-cover__background.has-white-background-color {
+    display: none;
+  }
+
+  .hero-b {
+    margin-bottom: 20px;
+  }
+
   h3.hero-text {
     margin: 0;
     color: #121212;
@@ -72,26 +80,114 @@
   .blog-image-div {
     padding-top: 2rem;
   }
+
+  div h2 {
+    margin-top: 3rem;
+
+    a:hover {
+      color: $green;
+    }
+  }
+  .learn-more-link:hover {
+    text-decoration: underline;
+  }
 }
 
 .blog-article-container {
-  display: flex;
-  flex-direction: row;
-  gap: 2rem;
-  margin-bottom: 2rem;
-
+  margin: 2rem 0 4rem;
   li {
-    width: 15%;
-    flex-grow: 1;
+    figure a:hover {
+      border: 1px solid rgba(0, 0, 0, 0.305);
+      transform: none;
+    }
 
     h2 {
       height: 4rem;
       margin-bottom: 2rem;
+
+      a:hover {
+        color: $green;
+        transform: none;
+      }
     }
     p {
       line-height: 1.3rem;
       padding-bottom: 1rem;
+
+      a:hover {
+        text-decoration: underline;
+      }
     }
   }
 }
 
+@media (max-width: 1025px) {
+  .blog-container {
+    flex-direction: column-reverse;
+    gap: 0;
+  }
+  .wp-container-core-post-template-is-layout-1.wp-container-core-post-template-is-layout-1 {
+    grid-template-columns: unset !important;
+  }
+  .blog-article-container {
+    background-color: #fff !important;
+    padding: 1rem;
+    li {
+      h2 {
+        height: fit-content;
+        margin-bottom: 1rem;
+      }
+    }
+  }
+  div.hero {
+    padding: 2rem !important;
+
+    .wp-block-cover__background.has-white-background-color {
+      display: block;
+    }
+    div {
+      background-position: center !important;
+      background-size: cover !important;
+      h3 {
+        color: rgb(34, 34, 34) !important;
+      }
+      p {
+        color: rgb(34, 34, 34) !important;
+      }
+    }
+  }
+}
+
+@media (max-width: 420px) {
+  div.hero {
+    div {
+      h3 {
+        font-size: 2rem !important;
+      }
+      p {
+        font-size: 1rem !important;
+        margin: 0.5rem;
+      }
+    }
+  }
+
+  .blog-image-div {
+    padding-top: 0 !important;
+  }
+
+  .blog-article-container,
+  .blog-container {
+    padding: 1rem !important;
+  }
+
+  .blog-container {
+    div {
+      h2 {
+        margin-top: 0;
+      }
+      p {
+        font-size: 16px !important;
+      }
+    }
+  }
+}

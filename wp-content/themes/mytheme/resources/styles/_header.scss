@@ -5,11 +5,22 @@ header {
   justify-content: space-between;
   align-items: center;
 
+  .menu-logo-div {
+    display: flex;
+    align-items: center;
+    .burger-menu-div {
+      display: none;
+    }
+  }
+
   div {
     img {
       width: 10rem;
     }
     nav {
+      display: flex;
+      align-items: center;
+
       ul {
         display: flex;
         flex-direction: row;
@@ -53,26 +64,32 @@ header {
         position: absolute;
         top: 0;
         left: 0;
-        width: 1.5rem; /* Adjust the width of the icon */
-        height: 1.5rem; /* Adjust the height of the icon */
+        width: 1.3rem; /* Adjust the width of the icon */
+        height: 1.3rem; /* Adjust the height of the icon */
         background-repeat: no-repeat;
         background-size: contain;
       }
 
       .menu-item.main_search a::before {
-        background-image: url("../images/search.png");
+        background-image: url("../images/search.svg");
+        width: 1.3rem; /* Adjust the width of the icon */
+        height: 1.3rem; /* Adjust the height of the icon */
       }
 
       .menu-item.main_wishlist a::before {
-        background-image: url("../images/heart.png");
+        background-image: url("../images/heart.svg");
+        width: 1.4rem; /* Adjust the width of the icon */
+        height: 1.4rem;
       }
 
       .menu-item.main_account a::before {
-        background-image: url("../images/user.png");
+        background-image: url("../images/user.svg");
       }
 
       .menu-item.main_cart a::before {
-        background-image: url("../images/cart.png");
+        background-image: url("../images/cart.svg");
+        width: 1.45rem; /* Adjust the width of the icon */
+        height: 1.45rem;
       }
     }
   }
@@ -106,15 +123,96 @@ header {
   }
 }
 
+.mobile-menu.show {
+  left: 0;
+}
+
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  left: -85vw;
+  width: 85vw;
+  height: 100vh;
+  background-color: #fffffff2;
+  z-index: 2;
+  transition: left 0.3s ease;
+
+  nav ul {
+    margin: 0;
+
+    li {
+      font-size: 1.3rem;
+      margin: 0.5rem 0;
+      a {
+        color: black;
+        font-weight: 500;
+      }
+    }
+  }
+
+  .icon-menu-mobile {
+    .main_search,
+    .main_cart {
+      display: none;
+    }
+  }
+  .mobile-logo-div {
+    margin: 4rem 2rem 2rem;
+    a img {
+      width: 10rem;
+    }
+  }
+}
+
 @media (max-width: 1025px) {
+  .icon-menu-mobile {
+    display: none;
+  }
   .nyheter-cat,
   .eko-cat {
+    display: none;
+  }
+  .burger-menu-div {
+    display: block !important;
+
+    img {
+      cursor: pointer;
+      width: 1.6rem;
+      height: 1.6rem;
+      margin-bottom: 5px;
+    }
+  }
+
+  .main-menu-div {
     display: none;
   }
 }
 
 @media (max-width: 420px) {
+  .logo-div a img {
+    width: 7rem;
+  }
+  .subheader a h4 {
+    font-size: 12px;
+  }
   .sustain-cat {
+    display: none;
+  }
+  .usp {
+    span {
+      font-size: 12px;
+
+      &:last-of-type {
+        display: none;
+      }
+
+      i {
+        padding: 5px;
+      }
+    }
+  }
+  #secondary-menu .main_wishlist,
+  #secondary-menu .main_account {
     display: none;
   }
 }
