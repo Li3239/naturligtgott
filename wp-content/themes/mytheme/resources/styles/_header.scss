@@ -27,6 +27,7 @@ header {
         li {
           padding: 0 0.5rem;
           font-size: 1.1rem;
+          font-weight: 600;
 
           a {
             color: rgb(34, 34, 34);
@@ -214,5 +215,8 @@ header {
   #secondary-menu .main_wishlist,
   #secondary-menu .main_account {
     display: none;
+  }
+  .icon-menu-mobile {
+    display: block;
   }
 }

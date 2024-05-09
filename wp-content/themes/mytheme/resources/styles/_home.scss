@@ -21,6 +21,23 @@
     padding-bottom: 0;
     text-align: left;
 
+    .wpcp-product-price {
+      del {
+        color: red;
+
+        .woocommerce-Price-amount {
+          color: red;
+
+          span {
+            color: red;
+          }
+        }
+      }
+      ins {
+        text-decoration: none;
+      }
+    }
+
     .wpcp-product-price,
     .wpcp-product-title {
       text-align: left !important;
@@ -33,7 +50,7 @@
       text-transform: uppercase;
     }
     .wpcp-cart-button p a {
-      width: 100%;
+      width: -webkit-fill-available;
       margin-bottom: 1rem;
       border-radius: 0;
       background: $green !important;
