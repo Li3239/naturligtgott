@@ -12,6 +12,7 @@ get_header();
 
 <main id="primary" class="content-area">
     <div class="container">
+  
         <div class="post-list">
             <?php
             // Hämta alla inlägg
@@ -38,7 +39,13 @@ get_header();
                                 
                             </header><!-- .entry-header -->
                             <div class="entry-content">
-                                <?php the_excerpt(); ?>
+                                <?php
+                                // Custom excerpt length
+                                $excerpt_length = 30; // Number of words to display
+                                $excerpt = wp_trim_words( get_the_excerpt(), $excerpt_length, '' );
+                                echo $excerpt . '...';
+                                ?>
+                                <a href="<?php the_permalink(); ?>" class="read-more"> Read More</a>
                             </div><!-- .entry-content -->
                             <div class="entry-meta">
                                     <span class="posted-on">Publicerat <?php echo get_the_date(); ?></span>

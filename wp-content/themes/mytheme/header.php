@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    
     <script
       src="https://kit.fontawesome.com/f14b07e4b8.js"
       crossorigin="anonymous"
@@ -19,11 +19,41 @@
 <body>
     <?php wp_body_open(); ?>
 
+    <div class="mobile-menu">
+    <div class="mobile-logo-div">
+        <a href="/">
+            <img src="<?php echo get_stylesheet_directory_uri() . '/resources/images/logo.png'; ?>" alt="Logo">
+        </a>
+    </div>
+    <?php 
+            $menu = array(
+                'theme_location' => 'main_menu',
+                'container' => 'nav',
+                'container_class' => 'menu-mobile'
+            );
+            wp_nav_menu($menu); 
+            
+            $menu = array(
+                'theme_location' => 'main_menu_icons',
+                'container' => 'nav',
+                'container_class' => 'icon-menu-mobile'
+            );
+            wp_nav_menu($menu); 
+
+        ?>
+
+    
+
+    </div>
+
     <header class="header">
-        <div class="logo-div">
-        <img src="<?php echo get_stylesheet_directory_uri() . '/resources/images/logo.png'; ?>" alt="Logo">
-        </div>
-        <div class="main-menu-div">
+    <div class="logo-div">
+        <a href="/">
+            <img src="<?php echo get_stylesheet_directory_uri() . '/resources/images/logo.png'; ?>" alt="Logo">
+        </a>
+    </div>
+    <!-- Main menu -->
+    <div class="main-menu-div">
         <?php 
             $menu = array(
                 'theme_location' => 'main_menu',
@@ -31,10 +61,14 @@
                 'container' => 'nav',
                 'container_class' => 'menu'
             );
-            
-            wp_nav_menu($menu); ?> 
+            wp_nav_menu($menu); 
+        ?> 
+    </div>
+    <!-- Main menu icons -->
+    <div class="menu-logo-div">
+        <div class="search_input" style="display: none;">
+        <?php echo do_shortcode('[live_search]'); ?>
         </div>
-        <div class="menu-logo-div">
         <?php 
             $menu = array(
                 'theme_location' => 'main_menu_icons',
@@ -42,10 +76,13 @@
                 'container' => 'nav',
                 'container_class' => 'menu'
             );
-            
-            wp_nav_menu($menu); ?>  
-        </div>
-       
+            wp_nav_menu($menu); 
+        ?>
+        <div class="burger-menu-div">
+            <img src="<?php echo get_stylesheet_directory_uri() . '/resources/images/menu.svg'; ?>" alt="Logo">
+        </div>  
+    </div>
+
     </header>
     <div class="subheader">
         <a href=""><h4>ALLA PRODUKTER</h4></a>

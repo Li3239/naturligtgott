@@ -1,6 +1,7 @@
 <?php
 
 require_once('hooks.php');
+require_once('shortcodes.php');
 
 function mytheme_enqueue()
 {
