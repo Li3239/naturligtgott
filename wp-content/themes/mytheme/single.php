@@ -1,9 +1,9 @@
-<!-- single.php 是用来控制post的， 打开post：http://gritsport.test/hello-world/  hello-world 是post的slug -->
+<!-- single.php allows customization of the way blog posts are displayed -->
 
 <?php get_header(); ?>
 <!-- content -->
 <main class="single-blogpost">
-   <!--  <?= the_title() ?> -->
+    <!--  <?= the_title() ?> -->
     <?= the_content() ?>
 
 </main>
