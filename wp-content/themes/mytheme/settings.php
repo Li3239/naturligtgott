@@ -1,5 +1,6 @@
 <?php
-
+// This is settings.php file for MyTheme WordPress Theme
+// This file handles the theme settings added to the WordPress dashboard
 
 if (!is_admin()) {
     return;
