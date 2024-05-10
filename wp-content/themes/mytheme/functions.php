@@ -1,13 +1,10 @@
 <?php
 
-require_once(get_template_directory() . "/vite.php");
-require_once(get_template_directory() . "/init.php");
-require_once(get_template_directory() . "/settings.php");
-
-
 if (!defined('ABSPATH')) {
     exit;
 }
+
+require_once(__DIR__ . "/init.php");
 
 // support woocommerce
 function mytheme_add_woocommerce_support()
@@ -24,4 +21,3 @@ function custom_modify_homepage_query( $query ) {
     }
 }
 add_action( 'pre_get_posts', 'custom_modify_homepage_query' );
-
