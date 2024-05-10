@@ -14,4 +14,30 @@ document.addEventListener('DOMContentLoaded', function() {
             mobileMenu.classList.remove('show');
         }
     });
+
+    //show the search input on click 
+    jQuery(document).ready(function($) {
+        $('.main_search').on('click', function() {
+            $('.search_input').toggle();
+        });
+    });
+    
+    jQuery(document).ready(function($) {
+        // Hide the search input initially
+        $('.search_input').hide();
+    
+        // Show or hide the search input based on focus and input content
+        $('#keyword').on('focus', function() {
+            $('.search_input').show();
+        });
+    
+        $('#keyword').on('blur', function() {
+            // Check if the input is empty
+            if ($(this).val().trim().length === 0) {
+                $('.search_input').hide();
+            }
+        });
+    });
+    
+    
 });

@@ -66,6 +66,9 @@
     </div>
     <!-- Main menu icons -->
     <div class="menu-logo-div">
+        <div class="search_input" style="display: none;">
+        <?php echo do_shortcode('[live_search]'); ?>
+        </div>
         <?php 
             $menu = array(
                 'theme_location' => 'main_menu_icons',
