@@ -29,3 +29,20 @@ function mytheme_init()
     register_nav_menus($menu);
 }
 add_action("after_setup_theme", "mytheme_init");
+
+add_filter( 'woocommerce_breadcrumb_defaults', 'change_breadcrumb_delimiter' );
+
+function custom_body_classes( $classes ) {
+    // Check if it's the shop page
+    if ( is_shop() ) {
+        // Remove the existing class
+        $key = array_search( 'woocommerce', $classes );
+        if ( $key !== false ) {
+            unset( $classes[ $key ] );
+        }
+        // Add the new class
+        $classes[] = 'shop';
+    }
+    return $classes;
+}
+add_filter( 'body_class', 'custom_body_classes' );

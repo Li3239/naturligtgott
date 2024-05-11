@@ -21,3 +21,15 @@ function custom_modify_homepage_query( $query ) {
     }
 }
 add_action( 'pre_get_posts', 'custom_modify_homepage_query' );
+
+add_filter( 'woocommerce_page_title', 'custom_modify_page_title', 10, 1 );
+function custom_modify_page_title( $page_title ) {
+    // Check if it's the product listing page
+    if ( is_shop() ) {
+        // Return an empty string to remove the title
+        return '';
+    }
+
+    // For other pages, return the original page title
+    return $page_title;
+}

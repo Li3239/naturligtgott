@@ -21,7 +21,31 @@ if (!defined('ABSPATH')) {
 get_header();
 ?>
 
-<main class="<?php echo is_single() ? 'single-blogpost' : (is_checkout() ? 'content-checkout' : (is_front_page() ? 'content' : 'content')); ?>">
+<?php
+// Define the default class
+$class = 'content';
+
+// Check if it's a single blog post
+if (is_single()) {
+    // Check if it's a single product
+    if (is_singular('product')) {
+        $class = 'single-product';
+    } else {
+        $class = 'single-blogpost';
+    }
+} 
+// Check if it's the checkout page
+elseif (is_checkout()) {
+    $class = 'content-checkout';
+} 
+// Check if it's the shop page
+elseif (is_shop()) {
+    $class = 'shop-content';
+}
+
+// Output the class attribute with the determined value
+echo '<main id="primary" class="' . esc_attr($class) . '">';
+?>
     <?php
         if (!is_front_page()) {
             echo the_title();

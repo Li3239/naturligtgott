@@ -10,5 +10,3 @@ function change_breadcrumb_delimiter( $defaults ) {
 
     return $defaults;
 }
-add_filter( 'woocommerce_breadcrumb_defaults', 'change_breadcrumb_delimiter' );
-
