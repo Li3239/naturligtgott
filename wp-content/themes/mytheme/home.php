@@ -11,7 +11,6 @@ get_header();
 ?>
 
 <main id="primary" class="content-area">
-    <div class="container">
   
         <div class="post-list">
             <?php

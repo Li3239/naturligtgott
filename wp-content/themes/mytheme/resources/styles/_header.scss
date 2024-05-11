@@ -8,6 +8,58 @@ header {
   .menu-logo-div {
     display: flex;
     align-items: center;
+
+    nav #secondary-menu {
+      padding-left: 0;
+    }
+    .search_input {
+      right: 18%;
+      z-index: 10;
+      position: absolute;
+      input {
+        padding: 0.5rem;
+        font-weight: 500;
+        letter-spacing: 0.5px;
+        box-shadow: 0 6px 12px rgba(55, 55, 55, 0.2);
+        border: unset;
+        border-radius: 5px;
+        width: 10rem;
+
+        &:focus {
+          outline: none;
+        }
+      }
+      #desktop-productfetch {
+        top: 11rem;
+        position: absolute;
+        width: 150vh;
+        left: -40rem;
+        background-color: #f0fffff7;
+        z-index: 2000;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0 2rem;
+        padding: 0 2rem;
+
+        .product-li {
+          margin: 2rem auto;
+          width: calc(50% - 8rem);
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          gap: 1rem;
+          padding: 2rem;
+          background-color: #ffffffd4;
+          border-radius: 5px;
+          box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+
+          h3 a {
+            color: #222222;
+            letter-spacing: 0.5px;
+          }
+        }
+      }
+    }
     .burger-menu-div {
       display: none;
     }
@@ -133,9 +185,9 @@ header {
   top: 0;
   left: -85vw;
   width: 85vw;
-  height: 100vh;
+  height: 100%;
   background-color: #fffffff2;
-  z-index: 2;
+  z-index: 23;
   transition: left 0.3s ease;
 
   nav ul {
@@ -158,14 +210,73 @@ header {
     }
   }
   .mobile-logo-div {
-    margin: 4rem 2rem 2rem;
+    margin: 3rem 2rem 2rem;
     a img {
       width: 10rem;
+    }
+  }
+  .mobile-search-input {
+    margin: 1rem 2.5rem;
+    input {
+      padding: 0.5rem;
+      font-weight: 500;
+      letter-spacing: 0.5px;
+      box-shadow: 0 6px 12px rgba(55, 55, 55, 0.2);
+      border: 1px solid $orange;
+      border-radius: 5px;
+
+      &:focus {
+        outline: none;
+      }
+    }
+    #mobile-productfetch {
+      margin-top: 1rem;
+      padding: 1rem 0;
+
+      .product-li {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 1rem;
+        background-color: #ffffffd4;
+        border-radius: 5px;
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+
+        h3 {
+          margin-top: 0;
+          a {
+            font-size: 0.8rem;
+            color: #222222;
+            letter-spacing: 0.5px;
+          }
+        }
+        img {
+          width: 5rem;
+        }
+      }
     }
   }
 }
 
 @media (max-width: 1025px) {
+  header .menu-logo-div .search_input #desktop-productfetch {
+    top: 11rem;
+    position: absolute;
+    width: 100vw;
+    gap: 0 4rem;
+    justify-content: center;
+
+    .product-li {
+      width: 30% !important;
+      margin: 2rem 0;
+    }
+  }
+  header .menu-logo-div .search_input {
+    right: 25%;
+  }
+  .mobile-search-input {
+    display: none;
+  }
   .icon-menu-mobile {
     display: none;
   }
@@ -190,6 +301,12 @@ header {
 }
 
 @media (max-width: 420px) {
+  div.search_input {
+    display: none;
+  }
+  .mobile-search-input {
+    display: block;
+  }
   .logo-div a img {
     width: 7rem;
   }
@@ -213,7 +330,7 @@ header {
     }
   }
   #secondary-menu .main_wishlist,
-  #secondary-menu .main_account {
+  #secondary-menu .main_search {
     display: none;
   }
   .icon-menu-mobile {

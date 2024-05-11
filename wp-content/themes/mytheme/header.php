@@ -41,6 +41,9 @@
             wp_nav_menu($menu); 
 
         ?>
+        <div class="mobile-search-input">
+        <?php echo do_shortcode('[mobile_live_search]'); ?>
+        </div>
 
     
 
