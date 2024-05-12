@@ -6,6 +6,7 @@ if (!defined('ABSPATH')) {
 
 require_once(__DIR__ . "/init.php");
 
+
 // support woocommerce
 function mytheme_add_woocommerce_support()
 {

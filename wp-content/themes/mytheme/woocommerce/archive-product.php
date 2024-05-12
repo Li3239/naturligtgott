@@ -94,6 +94,13 @@ if ( woocommerce_product_loop() ) {
      */
     do_action( 'woocommerce_no_products_found' );
 }
+?>
+
+<div class="button-div">
+<button id="load-more-btn">Load More</button>
+</div>
+
+<?php
 
 /**
  * Hook: woocommerce_after_main_content.

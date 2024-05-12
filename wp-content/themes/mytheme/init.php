@@ -4,6 +4,7 @@ require_once('hooks.php');
 require_once('shortcodes.php');
 require_once('vite.php');
 require_once('settings.php');
+require_once('ajax.php');
 
 function mytheme_enqueue()
 {
