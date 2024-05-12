@@ -177,7 +177,7 @@ function mobile_product_fetch() {
 function custom_button_shortcode() {
     $about_page_id = 139; 
     $about_page_url = get_permalink($about_page_id);
-    echo $about_page_url;
+   /*  echo $about_page_url; */
 
     ob_start(); ?>
     <button  class="plant_btn">

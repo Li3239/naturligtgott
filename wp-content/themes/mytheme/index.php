@@ -46,11 +46,7 @@ elseif (is_shop()) {
 // Output the class attribute with the determined value
 echo '<main id="primary" class="' . esc_attr($class) . '">';
 ?>
-    <?php
-        if (!is_front_page()) {
-            echo the_title();
-            }
-    ?>
+    <!--  -->
 
     <?= the_content() ?>
 </main>
