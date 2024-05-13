@@ -155,6 +155,36 @@ function mytheme_add_settings_init()
             "option_type" => "text"
         )
     );
+
+    //=======================================
+    // add block email_setting
+    //=======================================
+    add_settings_section(
+        'email_setting',
+        'Email Setting',
+        'mytheme_add_email_settings_section', // callback function
+        'butik'
+    );
+
+    //------------------
+    // Email Order Summary Info
+    //------------------
+    register_setting(
+        "butik",
+        "email_thanks_info"
+    );
+    add_settings_field(
+        "email_thanks_info",
+        "Thanks Text In The Email Template",
+        "mytheme_section_setting",
+        "butik",
+        "email_setting",
+        array(
+            "option_name" => "email_thanks_info",
+            "option_type" => "textarea"
+        )
+    );
+    
 }
 
 /*
@@ -174,6 +204,16 @@ function mytheme_add_footer_settings_section()
 {
     echo "<hr>";
     echo "<p> General settings for the store footer.</p>";
+    echo "<hr>";
+}
+
+/*
+** footer section callback function
+*/
+function mytheme_add_email_settings_section()
+{
+    echo "<hr>";
+    echo "<p> General settings for the store email template.</p>";
     echo "<hr>";
 }
 
