@@ -42,6 +42,9 @@ elseif (is_checkout()) {
 elseif (is_shop()) {
     $class = 'shop-content';
 }
+elseif (is_cart()){
+    $class = "content-cart";
+}
 
 // Output the class attribute with the determined value
 echo '<main id="primary" class="' . esc_attr($class) . '">';
