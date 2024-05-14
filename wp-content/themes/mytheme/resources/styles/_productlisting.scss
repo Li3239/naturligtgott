@@ -211,6 +211,13 @@
         }
       }
     }
+    .no-more-data {
+      padding-top: 30px;
+      padding-bottom: 30px;
+      text-align: center;
+      @include return-sub-title-style;
+      color: $tertiary-text-color;
+    }
   }
 }
 

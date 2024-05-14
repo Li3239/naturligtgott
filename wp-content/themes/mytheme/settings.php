@@ -185,6 +185,35 @@ function mytheme_add_settings_init()
         )
     );
     
+    //=======================================
+    // add block product_listing_setting
+    //=======================================
+    add_settings_section(
+        'product_listing_setting',
+        'Email Setting',
+        'mytheme_add_product_listing_setting_section', // callback function
+        'butik'
+    );
+
+    //------------------
+    // no more to load
+    //------------------
+    register_setting(
+        "butik",
+        "no_more_to_load"
+    );
+    add_settings_field(
+        "no_more_to_load",
+        "No More To Load Message",
+        "mytheme_section_setting",
+        "butik",
+        "product_listing_setting",
+        array(
+            "option_name" => "no_more_to_load",
+            "option_type" => "textarea"
+        )
+    );
+    
 }
 
 /*
@@ -216,6 +245,17 @@ function mytheme_add_email_settings_section()
     echo "<p> General settings for the store email template.</p>";
     echo "<hr>";
 }
+/*
+** For "lazyload function in product listing page" section callback function
+**   eg. No more data to load  
+*/
+function mytheme_add_product_listing_setting_section()
+{
+    echo "<hr>";
+    echo "<p> General settings for Product Listing page.</p>";
+    echo "<hr>";
+}
+
 
 /*
 ** draw the Settings page

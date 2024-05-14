@@ -96,9 +96,9 @@ if ( woocommerce_product_loop() ) {
 }
 ?>
 
-<div class="button-div">
+<!-- <div class="button-div">
 <button id="load-more-btn">Load More</button>
-</div>
+</div> -->
 
 <?php
 
