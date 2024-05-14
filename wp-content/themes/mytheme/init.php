@@ -11,8 +11,19 @@ function mytheme_enqueue()
 {
     $theme_directory_uri = get_template_directory_uri();
     wp_enqueue_style("custom-style", $theme_directory_uri . "/style.css");
+
+    wp_enqueue_style(
+        'font-awesome-free', // ID
+        'https://use.fontawesome.com/releases/v6.5.1/css/all.css', // Font Awesome CDN link
+        array(), // dependency，nothing，null array
+        '6.5.1' // version number
+    );
+
+    // Enqueue app.js
+    wp_enqueue_script('custom-js', $theme_directory_uri . "/app.js", array('jquery'), '1.0', true);
 }
 add_action("wp_enqueue_scripts", "mytheme_enqueue");
+
 
 function mytheme_init()
 {
