@@ -14,3 +14,10 @@
         font-weight: 400;
     }
 }
+
+@media (max-width: 420px) {
+    .omOss-content{
+        padding: 0;
+        text-align: center;
+    }
+}
