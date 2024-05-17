@@ -21,6 +21,8 @@ function mytheme_enqueue()
 
     // Enqueue app.js
     wp_enqueue_script('custom-js', $theme_directory_uri . "/app.js", array('jquery'), '1.0', true);
+    // Enqueue update-cart-count.js
+    wp_enqueue_script('update-cart-count-js', $theme_directory_uri . '/resources/scripts/update-cart-count.js', array('jquery'), null, true);
 }
 add_action("wp_enqueue_scripts", "mytheme_enqueue");
 

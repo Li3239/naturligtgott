@@ -62,6 +62,10 @@
     </section>
 </footer>
 <?php wp_footer(); ?>
+<!-- point to the correct admin-ajax.php path which is available in update-cart-count.js -->
+<script>
+    let updateCartCount_ajaxUrl = '<?php echo admin_url('admin-ajax.php'); ?>';
+</script>
 
 </body>
 

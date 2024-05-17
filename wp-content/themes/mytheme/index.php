@@ -35,9 +35,14 @@ if (is_single()) {
     }
 } 
 // Check if it's the checkout page
-elseif (is_checkout()) {
+elseif (is_checkout() && !is_wc_endpoint_url('order-received')) {
     $class = 'content-checkout';
 } 
+// Check if it's the thank you(order received) page
+elseif (is_wc_endpoint_url('order-received')) {
+    // This is the "Thank You" page
+    $class = 'content-thank-you';
+}
 // Check if it's the shop page
 elseif (is_shop()) {
     $class = 'shop-content';

@@ -1,0 +1,40 @@
+main.content-thank-you {
+    .woocommerce {
+        width: 90%;
+        margin: auto;
+        .woocommerce-order {
+            .woocommerce-notice--success {
+                margin: 30px 0!important;
+                @include h2-common-font-style;
+                color: $textblack;
+            }
+            .woocommerce-order-overview {
+                padding-left: 0 !important;
+                li {
+                    @include h3-common-font-style;
+                }
+            }
+            p {
+                margin-bottom: 30px;
+                @include body-common-font-style;
+            }
+            .woocommerce-order-details {
+                width: 80%;
+            }
+        }
+    }
+
+    .woocommerce-customer-details {
+        .woocommerce-columns.woocommerce-columns--2.woocommerce-columns--addresses.col2-set.addresses {
+            width: 80%;
+            margin-top: 30px;
+            .woocommerce-column {
+                width: 45%;
+                margin: 10px;
+                address {
+                    height: auto;
+                }
+            }
+        }
+    }
+}
