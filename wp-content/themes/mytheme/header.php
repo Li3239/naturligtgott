@@ -88,11 +88,11 @@
 
     </header>
     <div class="subheader">
-        <a href=""><h4>ALLA PRODUKTER</h4></a>
+        <a href="http://naturligtgott.test/shop/"><h4>ALLA PRODUKTER</h4></a>
         <a href=""><h4>BÄST SÄLJARE</h4></a>
-        <a href="" class="nyheter-cat"><h4>NYHETER</h4></a>
-        <a href="" class="eko-cat"><h4>EKOLOGIST</h4></a>
-        <a href="" class="sustain-cat"><h4>HÅLLBARA PRODUKTER</h4></a>
+        <a href="http://naturligtgott.test/product-category/nyheter/" class="nyheter-cat"><h4>NYHETER</h4></a>
+        <a href="http://naturligtgott.test/product-category/ekologisk/" class="eko-cat"><h4>EKOLOGIST</h4></a>
+        <a href="http://naturligtgott.test/product-category/hallbart/" class="sustain-cat"><h4>HÅLLBARA PRODUKTER</h4></a>
         <a href=""><h4>REA</h4></a>
     </div>
     <div class="usp">
