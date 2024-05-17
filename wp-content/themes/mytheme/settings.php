@@ -190,7 +190,7 @@ function mytheme_add_settings_init()
     //=======================================
     add_settings_section(
         'product_listing_setting',
-        'Email Setting',
+        'Product Listing Page Setting',
         'mytheme_add_product_listing_setting_section', // callback function
         'butik'
     );
@@ -213,6 +213,36 @@ function mytheme_add_settings_init()
             "option_type" => "textarea"
         )
     );
+    
+    // //=======================================
+    // // add block shipping_setting
+    // //=======================================
+    // add_settings_section(
+    //     'shipping_setting',
+    //     'Shipping Setting',
+    //     'mytheme_add_shipping_setting_section', // callback function
+    //     'butik'
+    // );
+
+    // //------------------
+    // // free shipping with 
+    // // minimum purchase amount
+    // //------------------
+    // register_setting(
+    //     "butik",
+    //     "free_shipping_minimum_purchase_amount"
+    // );
+    // add_settings_field(
+    //     "free_shipping_minimum_purchase_amount",
+    //     "Free Shipping With Minimum Purchase Amount",
+    //     "mytheme_section_setting",
+    //     "butik",
+    //     "shipping_setting",
+    //     array(
+    //         "option_name" => "free_shipping_minimum_purchase_amount",
+    //         "option_type" => "amount"
+    //     )
+    // );
     
 }
 
@@ -255,6 +285,16 @@ function mytheme_add_product_listing_setting_section()
     echo "<p> General settings for Product Listing page.</p>";
     echo "<hr>";
 }
+/*
+** For "shipping setting" section callback function
+**   eg. free shipping minium quantity
+*/
+// function mytheme_add_shipping_setting_section()
+// {
+//     echo "<hr>";
+//     echo "<p> General settings for Shipping setting.</p>";
+//     echo "<hr>";
+// }
 
 
 /*
@@ -273,12 +313,25 @@ function mytheme_section_setting($args)
         name="' . esc_attr($option_name) . '"
         rows="5" 
         cols="50">' . esc_textarea($option_value) . '</textarea>';
-    } else {
+    }
+    // Check if the type is amount
+    elseif ($option_type === 'amount') {
+        echo '<input type="number" 
+                id="' . esc_attr($option_name) . '" 
+                name="' . esc_attr($option_name) . '" 
+                value="' . esc_attr($option_value) . '"
+                step="0.01"  // Allow decimal to be input
+                min="0"  // Minimum value should be 0 or any desired base value
+                style="text-align: right; width: 100px"
+              /> kr';
+    } 
+    else {
         // render a input element
         echo '<input type="' . esc_attr($option_type) . '" 
                      id="' . esc_attr($option_name) . '" 
                      name="' . esc_attr($option_name) . '" 
                      value="' . esc_attr($option_value) . '"
+                     style="width: 300px;"
               />';
     }
 }

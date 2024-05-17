@@ -1,4 +1,6 @@
 <?php
+require_once(__DIR__ . "/includes/checkout-page-hooks.php");
+require_once(__DIR__ . "/includes/add-to-cart-hook.php");
 
 // CHANGES BREADCRUMB DELIMITER
 function change_breadcrumb_delimiter( $defaults ) {

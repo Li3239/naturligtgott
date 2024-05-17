@@ -97,8 +97,6 @@ footer {
 
           li.twitter a::before {
             background-image: url("../images/twitter.png");
-            width: 1.3rem;
-            height: 1.3rem;
           }
 
           li.instagram a::before {
@@ -159,12 +157,6 @@ footer {
           ul {
             li {
               margin-right: 8px;
-            }
-            li.facebook::before,
-            li.twitter::before,
-            li.instagram::before {
-              width: 25px;
-              height: 20px;
             }
           }
         }
