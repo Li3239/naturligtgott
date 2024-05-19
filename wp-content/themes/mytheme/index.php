@@ -54,8 +54,6 @@ elseif (is_cart()){
 // Output the class attribute with the determined value
 echo '<main id="primary" class="' . esc_attr($class) . '">';
 ?>
-    <!--  -->
-
     <?= the_content() ?>
 </main>
 

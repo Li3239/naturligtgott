@@ -16,7 +16,7 @@ jQuery(document).ready(function($) {
     // from the server through AJAX request.
     //----------------------------------------------
     function updateCartCount() {
-        console.log("Updating cart count...");
+        // console.log("Updating cart count...");
         $.ajax({
             url: updateCartCount_ajaxUrl,
             type: 'POST',
@@ -25,9 +25,9 @@ jQuery(document).ready(function($) {
                 action: 'get_cart_contents_count'
             },
             success: function(response) {
-                console.log("Cart count updated: ", response);
-                var count = parseInt(response, 10);
-                var $cartCountSpan = $('.main_cart .cart-count');
+                // console.log("Cart count updated: ", response);
+                let count = parseInt(response, 10);
+                let $cartCountSpan = $('.main_cart .cart-count');
                 if (count > 0) {
                     $cartCountSpan.text(count).show(); 
                 } else {
@@ -45,9 +45,9 @@ jQuery(document).ready(function($) {
     //----------------------------------------------
     $(document).on('change', '.cart_item .quantity input', function(e) {
         e.preventDefault();
-        var $input = $(this);
-        var quantity = $input.val();
-        var product_id = $input.closest('.cart_item').find('.remove').data('product_id');
+        let $input = $(this);
+        let quantity = $input.val();
+        let product_id = $input.closest('.cart_item').find('.remove').data('product_id');
 
         $.ajax({
             url: updateCartCount_ajaxUrl, 
