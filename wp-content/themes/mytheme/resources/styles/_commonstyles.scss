@@ -1,3 +1,7 @@
+#main {
+  margin-top: 0;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -66,27 +70,27 @@ body {
 
 @mixin return-title-style {
   font-family: Roboto;
-   font-size: 30px;
-   font-weight: 700;
-   line-height: 22px;
-   letter-spacing: 0em;
-} 
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 22px;
+  letter-spacing: 0em;
+}
 
 @mixin return-sub-title-style {
   font-family: Roboto;
-   font-size: 20px;
-   font-weight: 400;
-   line-height: 22px;
-   letter-spacing: 0em;
-} 
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 22px;
+  letter-spacing: 0em;
+}
 
 @mixin return-text-style {
   font-family: Roboto;
-   font-size: 16px;
-   font-weight: 400;
-   line-height: 32px;
-   letter-spacing: 0.01em;
-} 
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 32px;
+  letter-spacing: 0.01em;
+}
 
 @mixin h3-common-font-style {
   font-family: Roboto;

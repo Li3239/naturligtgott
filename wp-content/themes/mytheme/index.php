@@ -33,11 +33,11 @@ if (is_single()) {
     } else {
         $class = 'single-blogpost';
     }
-} 
+}
 // Check if it's the checkout page
 elseif (is_checkout() && !is_wc_endpoint_url('order-received')) {
     $class = 'content-checkout';
-} 
+}
 // Check if it's the thank you(order received) page
 elseif (is_wc_endpoint_url('order-received')) {
     // This is the "Thank You" page
@@ -47,8 +47,13 @@ elseif (is_wc_endpoint_url('order-received')) {
 elseif (is_shop()) {
     $class = 'shop-content';
 }
-elseif (is_cart()){
-    $class = "content-cart";
+// Check if it's the cart page
+elseif (is_cart()) {
+    $class = 'content-cart';
+}
+// Check if it's a single product detail page
+elseif (is_product()) {
+    $class = 'content-detail';
 }
 
 // Output the class attribute with the determined value

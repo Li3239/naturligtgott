@@ -61,3 +61,6 @@ function custom_body_classes( $classes ) {
     return $classes;
 }
 add_filter( 'body_class', 'custom_body_classes' );
+
+// Include custom WooCommerce wrapper functions
+require get_template_directory() . '/woocommerce-wrapper-functions.php';
