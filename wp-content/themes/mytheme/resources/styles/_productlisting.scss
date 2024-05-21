@@ -45,6 +45,7 @@
         }
 
         .bapf_slidr_all {
+          position: relative !important;
           .ui-slider-handle {
             border: 2px solid black;
             background-color: #ffffff00;
@@ -65,8 +66,9 @@
             padding: 0.5rem;
             width: fit-content;
           }
-          .bapf_from {
-            margin-right: 42%;
+          .bapf_to {
+            position: absolute !important;
+            right: 0;
           }
         }
       }
@@ -148,15 +150,6 @@
           &:last-of-type {
             flex-grow: unset;
             width: 28%;
-          }
-
-          .added_to_cart {
-            position: absolute;
-            text-align: center;
-            bottom: 15%;
-            font-weight: 500;
-            letter-spacing: 0.5px;
-            color: $orange;
           }
 
           a {
@@ -269,6 +262,15 @@
       }
     }
   }
+}
+
+.listing .product-filter-div .product-div ul li .added_to_cart {
+  position: absolute;
+  text-align: center;
+  bottom: 15%;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  color: $orange;
 }
 
 @media (max-width: 1025px) {

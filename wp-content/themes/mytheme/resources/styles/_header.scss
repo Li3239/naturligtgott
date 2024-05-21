@@ -1,9 +1,24 @@
+body.admin-bar #stickyheading {
+  top: 32px;
+}
+
+header.hidden {
+  top: 6rem;
+}
+
 header {
+  background-color: #f0fffff0;
   padding: 1rem;
+  position: fixed;
+  width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  top: 0;
+  left: 0;
+  transition: top 0.3s ease;
+  z-index: 1000;
 
   .menu-logo-div {
     display: flex;
@@ -151,6 +166,7 @@ header {
   display: flex;
   justify-content: space-around;
   background-color: #378c0f;
+  margin-top: 6rem;
 
   a {
     color: white;
@@ -187,7 +203,7 @@ header {
   width: 85vw;
   height: 100%;
   background-color: #fffffff2;
-  z-index: 23;
+  z-index: 1001;
   transition: left 0.3s ease;
 
   nav ul {
@@ -297,6 +313,12 @@ header {
 
   .main-menu-div {
     display: none;
+  }
+}
+
+@media screen and (max-width: 782px) {
+  body.admin-bar #stickyheading {
+    top: 46px;
   }
 }
 

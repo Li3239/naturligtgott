@@ -47,7 +47,7 @@
 
     </div>
 
-    <header class="header">
+    <header id="stickyheading" class="header">
         <div class="logo-div">
             <a href="/">
                 <img src="<?php echo get_stylesheet_directory_uri() . '/resources/images/logo.png'; ?>" alt="Logo">
