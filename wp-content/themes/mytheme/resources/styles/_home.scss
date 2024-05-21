@@ -91,9 +91,7 @@
 }
 
 .blog-container {
-  margin: 1.5rem 0;
-  padding: 1rem 2rem !important;
-
+  padding: 0 !important;
   .blog-image-div {
     padding-top: 2rem;
   }
@@ -110,8 +108,18 @@
   }
 }
 
+.om-block {
+  padding-top: 2rem !important;
+}
+
+.blog-block {
+  margin: 2rem -2rem 0;
+  padding: 2rem;
+  background-color: #fff !important;
+}
+
 .blog-article-container {
-  margin: 2rem 0 4rem;
+  padding: 1rem 0;
   li {
     figure a:hover {
       border: 1px solid rgba(0, 0, 0, 0.305);
@@ -148,7 +156,6 @@
   }
   .blog-article-container {
     background-color: #fff !important;
-    padding: 1rem;
     li {
       h2 {
         height: fit-content;
@@ -177,6 +184,7 @@
 
 @media (max-width: 420px) {
   div.hero {
+    margin: 0 -1rem;
     div {
       h3 {
         font-size: 2rem !important;
@@ -192,9 +200,9 @@
     padding-top: 0 !important;
   }
 
-  .blog-article-container,
-  .blog-container {
-    padding: 1rem !important;
+  .blog-block {
+    padding: 1rem;
+    margin: 0 -1rem;
   }
 
   .blog-container {

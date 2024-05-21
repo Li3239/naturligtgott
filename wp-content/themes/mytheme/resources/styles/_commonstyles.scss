@@ -136,3 +136,9 @@ body {
   letter-spacing: 0em;
   text-align: left;
 }
+
+@media (max-width: 420px) {
+  body .content {
+    margin: 0 1rem;
+  }
+}
