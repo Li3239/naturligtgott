@@ -203,3 +203,18 @@ function custom_button_shortcode() {
     return ob_get_clean();
 }
 add_shortcode('custom_button', 'custom_button_shortcode');
+
+
+function activate_berocket_filter() {
+    $settings = get_option('br_filters_options');
+    
+    if ($settings && isset($settings['filter_groups']) && !empty($settings['filter_groups'])) {
+        foreach ($settings['filter_groups'] as &$group) {
+            if ($group['group_id'] == 314 && !$group['active']) {
+                $group['active'] = 1; 
+            }
+        }
+        update_option('br_filters_options', $settings);
+    }
+}
+add_action('admin_init', 'activate_berocket_filter');
