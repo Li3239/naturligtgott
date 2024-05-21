@@ -135,22 +135,17 @@
         flex-wrap: wrap;
         gap: 2rem;
         padding: 1rem 2rem;
+        margin: auto;
 
         li {
           position: relative;
-          width: 25%;
           display: flex;
           flex-direction: column;
           padding: 0.5rem 1rem;
           background-color: white;
           box-shadow: 0 6px 12px rgba(55, 55, 55, 0.2);
-          flex-grow: 1;
+          width: calc(31% - 2rem);
           justify-content: space-between;
-
-          &:last-of-type {
-            flex-grow: unset;
-            width: 28%;
-          }
 
           a {
             width: -webkit-fill-available;
@@ -273,21 +268,15 @@
   color: $orange;
 }
 
-@media (max-width: 1025px) {
-  .product-filter-div .product-div ul li {
-    &:last-of-type {
-      width: 25% !important;
-    }
-    a {
-      h2 {
-        font-size: 0.8rem;
-        height: 2rem;
-      }
-      .price {
-        font-size: 0.6rem;
-      }
+@media (max-width: 1187px) {
+  .product-filter-div .product-div ul {
+    li {
+      width: calc(31% - 2.2rem) !important;
     }
   }
+}
+
+@media (max-width: 1025px) {
   .product-filter-div
     .product-div
     ul
@@ -302,15 +291,21 @@
   .bapf_sfilter ul li {
     font-size: 0.8rem !important;
   }
-  .product-filter-div .filter-div div div div .bapf_slidr_all .bapf_from {
-    margin-right: 20%;
-  }
-}
+  .product-filter-div .product-div ul {
+    gap: 1rem !important;
+    padding: 1rem !important;
+    li {
+      width: calc(31% - 2.2rem) !important;
 
-@media (max-width: 1000px) {
-  .product-filter-div .product-div ul li {
-    &:last-of-type {
-      width: 41% !important;
+      a {
+        h2 {
+          font-size: 0.8rem;
+          height: 2rem;
+        }
+        .price {
+          font-size: 0.6rem;
+        }
+      }
     }
   }
   .product-filter-div .product-div .woocommerce-ordering select {
@@ -328,6 +323,16 @@
 }
 
 @media (max-width: 420px) {
+  .site-main .product-filter-div .product-div ul li a .onsale {
+    bottom: 20%;
+  }
+  .product-filter-div .product-div ul {
+    gap: 1rem !important;
+    padding: 2rem !important;
+    li {
+      width: 100% !important;
+    }
+  }
   .listing .woocommerce-breadcrumb {
     padding: 1rem 2rem;
     font-size: 0.6rem;
@@ -343,18 +348,6 @@
 
   .filter-div {
     display: none;
-  }
-  .product-filter-div .product-div ul {
-    padding: 0;
-    li {
-      width: 40% !important;
-      flex-grow: 1 !important;
-    }
-  }
-  .product-filter-div .product-div ul li {
-    &:last-of-type {
-      width: 40%;
-    }
   }
 
   .product-filter-div .product-div .woocommerce-result-count {
