@@ -121,6 +121,24 @@ header {
         vertical-align: middle; /* Align vertically */
         padding: 0 1rem; /* Reset padding */
         margin: 0; /* Reset margin */
+        //--------------------------
+        // important!! do not delete
+        //--------------------------
+        span.cart-count {
+          display: inline-block;
+          position: absolute;
+          width: 20px;
+          height: 20px;
+          line-height: 20px;
+          top: -10px;
+          right: 0;
+          font-size: 12px;
+          text-indent: 0;
+          background-color: red;
+          color: white;
+          border-radius: 50%;
+          text-align: center;
+        }
       }
 
       /* Set the icon as a background */
