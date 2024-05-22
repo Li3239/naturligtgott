@@ -3,6 +3,18 @@
   padding: 2rem;
   background-color: #fff;
 
+  table.woosw-items tr:nth-child(2n) td {
+    background-color: #22222200;
+  }
+
+  table.woosw-items tr:hover {
+    background-color: rgba(34, 34, 34, 0) !important;
+  }
+
+  table.woosw-items tr:hover td {
+    background-color: rgba(0, 0, 0, 0);
+  }
+
   .woosw-actions .woosw-copy {
     .woosw-copy-url input {
       padding: 0.5rem 1rem;

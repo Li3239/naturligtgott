@@ -134,7 +134,7 @@
         flex-direction: row;
         flex-wrap: wrap;
         gap: 2rem;
-        padding: 1rem 2rem;
+        padding: 2rem;
         margin: auto;
 
         li {
@@ -146,6 +146,20 @@
           box-shadow: 0 6px 12px rgba(55, 55, 55, 0.2);
           width: calc(31% - 2rem);
           justify-content: space-between;
+
+          .star-rating {
+            display: none;
+          }
+
+          .woocommerce-product-rating {
+            position: absolute;
+            bottom: -12%;
+            right: 0;
+            img {
+              padding: 3px;
+              width: 0.8rem;
+            }
+          }
 
           a {
             width: -webkit-fill-available;
