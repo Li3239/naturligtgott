@@ -1,0 +1,157 @@
+.woosw-list {
+  margin: 0 -2rem;
+  padding: 2rem;
+  background-color: #fff;
+
+  .woosw-actions .woosw-copy {
+    .woosw-copy-url input {
+      padding: 0.5rem 1rem;
+    }
+    .woosw-copy-btn button {
+      background-color: $orange;
+      padding: 0.5rem 1rem;
+      color: white;
+      text-align: center;
+      margin: 1rem 0;
+      font-weight: 500;
+      letter-spacing: 0.5px;
+      border-color: orange;
+    }
+  }
+
+  .woosw-items {
+    width: 100%;
+
+    .woosw-item {
+      display: flex;
+      align-items: center;
+
+      div {
+        margin: 0 2rem;
+        width: 20rem;
+      }
+      .woosw-item--info {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .woosw-item--name a {
+          color: #222222;
+          font-size: 1rem;
+          margin: 2rem 0;
+        }
+      }
+      .woosw-item--time {
+        display: none;
+      }
+      .woosw-item--atc p a {
+        background-color: $green;
+        padding: 0.5rem 1rem;
+        color: white;
+        text-align: center;
+        margin: 1rem 0;
+        font-weight: 500;
+      }
+      .woosw-item--price {
+        width: 15rem;
+        display: flex;
+        justify-content: space-between;
+        del {
+          color: rgb(228, 23, 23);
+          span {
+            color: rgb(228, 23, 23);
+            font-weight: 500;
+          }
+        }
+        ins {
+          text-decoration: none;
+          span {
+            font-weight: 500;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1025px) {
+  .woosw-list table {
+    max-width: 100vw;
+    width: 100vw !important;
+    box-sizing: border-box;
+    overflow: hidden;
+  }
+  .woosw-item--info {
+    flex-direction: column;
+  }
+  .woosw-list .woosw-items .woosw-item div {
+    margin: 0.2rem 0;
+  }
+  .woosw-list .woosw-items .woosw-item .woosw-item--info {
+    align-items: flex-start;
+  }
+  .woosw-list .woosw-items .woosw-item .woosw-item--price {
+    width: 10rem;
+  }
+}
+
+@media (max-width: 420px) {
+  .woosw-item--price {
+    width: 7rem !important;
+    .woocommerce-Price-amount {
+      font-size: 0.6rem;
+    }
+    del,
+    ins {
+      span {
+        font-size: 0.6rem;
+      }
+    }
+  }
+  .woosw-list .woosw-actions {
+    align-items: center;
+  }
+
+  .woosw-list .woosw-items .woosw-item div {
+    width: fit-content;
+  }
+  .woosw-list table.woosw-items .woosw-item .woosw-item--image a img,
+  .woosw-list table.woosw-items .woosw-item .woosw-item--image {
+    width: 30px;
+  }
+  .woosw-items .woosw-item .woosw-item--remove span:before,
+  .woosw-items .woosw-item .woosw-item--add span:before {
+    width: 10px;
+  }
+  .woosw-list .woosw-items .woosw-item .woosw-item--info .woosw-item--name a {
+    font-size: 0.8rem;
+  }
+  .woosw-list {
+    padding: 0 0.5rem;
+    max-width: 100vw;
+  }
+
+  .woosw-item {
+    position: relative;
+  }
+  .woosw-list .woosw-items .woosw-item .woosw-item--atc p a {
+    background-color: #378c0f;
+    padding: 0.2rem 0.5rem;
+    color: white;
+    text-align: center;
+    font-size: 0.6rem;
+    font-weight: 500;
+    margin-bottom: 0.8rem;
+  }
+  .woosw-list table.woosw-items .woosw-item .woosw-item--atc p,
+  .woosw-list
+    table.woosw-items
+    .woosw-item
+    .woosw-item--atc
+    .add_to_cart_inline {
+    display: block !important;
+    position: absolute;
+    right: 10%;
+    bottom: 0;
+  }
+}

@@ -293,6 +293,9 @@ body.admin-bar #stickyheading {
 }
 
 @media (max-width: 1025px) {
+  .nav-head {
+    width: 96vw !important;
+  }
   header .menu-logo-div .search_input #desktop-productfetch {
     top: 11rem;
     position: absolute;
@@ -323,7 +326,7 @@ body.admin-bar #stickyheading {
 
     img {
       cursor: pointer;
-      width: 1.6rem;
+      width: fit-content !important;
       height: 1.6rem;
       margin-bottom: 5px;
     }
@@ -341,8 +344,8 @@ body.admin-bar #stickyheading {
 }
 
 @media (max-width: 420px) {
-  header {
-    width: 93%;
+  .nav-head {
+    width: 93vw !important;
   }
   div.search_input {
     display: none;
