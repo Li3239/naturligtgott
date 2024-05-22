@@ -1,108 +1,125 @@
-
-    
-.post-list{
-    margin: 0 4rem;
-    padding-top: 5%;
-    max-width: 100%;
-    overflow-x: none;
+.post-list {
+  margin: 0 4rem;
+  padding-top: 5%;
+  max-width: 100%;
+  overflow-x: none;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  article {
+    background-color: white;
+    width: 20%;
+    margin: 1rem;
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
     flex-wrap: wrap;
-    article{
-        background-color: white;
-        width: 20%;
-        margin:1rem;
-        display:flex;
-        flex-direction: column;
-        flex-wrap: wrap;
-        .post-thumbnail{
-            width: 100%;
-            .wp-post-image{
-                    width: 100%;
-                   
-                }
-        
-        }
-        .post-content{
-            padding-left:10px;
-            .entry-header{
-                height: 10vh;
-                flex-direction: column;
-                justify-content: left;
-                align-items: left;
-               
-                .entry-title{
-                    height: 15vh;
-                   a{
-                    color: #121212;
-                   }
-                }
-                
-            }
-            .entry-content{
-                padding: 5%;
-                padding-left: 0;
-                height: 5vh;
-                p{
-                    color: #121212;
-                    font-family: "Roboto", sans-serif;
-                }
-                .read-more{
-                    color: #121212;
-                    font-weight: bold;
-                }
-            }
-            .entry-meta{
-                 padding:5%;  
-                 padding-left: 0; 
-                font-size: 12px;
-                
-                span{
-                    margin-right: 5px;
-                    a{
-                        text-decoration: none;
-                        color: black;
-                    }
-                }
-
-            }
-        }
+    .post-thumbnail {
+      width: 100%;
+      .wp-post-image {
+        width: 100%;
+      }
     }
+    .post-content {
+      padding-left: 10px;
+      .entry-header {
+        height: 10vh;
+        flex-direction: column;
+        justify-content: left;
+        align-items: left;
+
+        .entry-title {
+          height: 15vh;
+          a {
+            color: #121212;
+          }
+        }
+      }
+      .entry-content {
+        padding: 5%;
+        padding-left: 0;
+        height: 5vh;
+        p {
+          color: #121212;
+          font-family: "Roboto", sans-serif;
+        }
+        .read-more {
+          color: #121212;
+          font-weight: bold;
+        }
+      }
+      .entry-meta {
+        padding: 5%;
+        padding-left: 0;
+        font-size: 12px;
+
+        span {
+          margin-right: 5px;
+          a {
+            text-decoration: none;
+            color: black;
+          }
+        }
+      }
+    }
+  }
 }
 /* Media Queries for responsiveness */
 
-@media screen and (max-width: 1024px) {
-    .post-list{
-        margin: 0 0.5rem;
+@media screen and (max-width: 1480px) {
+  .entry-header {
+    height: 15vh;
+
+    .entry-title {
+      a {
+        font-size: 1.2rem;
+      }
     }
-    .post-list article {
-        width: 100%;
-        flex-basis: calc(50% - 2rem);
-    }
+  }
+  .post-list article .post-content .entry-content {
+    margin: 1rem 0;
+  }
+}
+
+@media screen and (max-width: 1025px) {
+  .post-list article .post-content .entry-header .entry-title {
+    height: auto !important;
+  }
+  .entry-header {
+    height: auto !important;
+  }
+  .post-list article .post-content .entry-content {
+    margin: 0;
+  }
+  .post-list {
+    margin: 0 0.5rem;
+  }
+  .post-list article {
+    width: 100%;
+    flex-basis: calc(50% - 2rem);
+  }
 }
 
 @media screen and (max-width: 768px) {
-    .post-list{
-        margin: 0 0.5rem;
-    }
-    .post-list article {
-        flex-basis: calc(50% - 2rem);
-    }
+  .post-list {
+    margin: 0 0.5rem;
+  }
+  .post-list article {
+    flex-basis: calc(50% - 2rem);
+  }
 }
 
 @media screen and (max-width: 480px) {
-    .post-list{
-        margin: 0 0.5rem;
-    }
-    .post-list article {
-        
-        flex-basis: calc(100% - 2rem);
-    }
-    .entry-header{
-        height: 10vh;
-        margin-bottom: 20px;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
+  .post-list {
+    margin: 0 0.5rem;
+  }
+  .post-list article {
+    flex-basis: calc(100% - 2rem);
+  }
+  .entry-header {
+    height: 10vh;
+    margin-bottom: 20px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 }
