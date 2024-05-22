@@ -59,6 +59,10 @@ elseif (is_product()) {
 elseif (is_page('login')) {
     $class = 'content-login';
 }
+// Check if it's the custom login page
+elseif (is_page('Kontakta Oss')) {
+    $class = 'content-kontakt';
+}
 
 // Output the class attribute with the determined value
 echo '<main id="primary" class="' . esc_attr($class) . '">';
