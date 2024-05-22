@@ -336,6 +336,12 @@
   }
 }
 
+@media (max-width: 900px) {
+  .product-filter-div .product-div ul li {
+    width: calc(48% - 2.2rem) !important;
+  }
+}
+
 @media (max-width: 420px) {
   .site-main .product-filter-div .product-div ul li a .onsale {
     bottom: 20%;
