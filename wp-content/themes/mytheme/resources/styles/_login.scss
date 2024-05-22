@@ -1,4 +1,5 @@
 .content-login{
+   
     display: flex;
     justify-content: space-between;
     flex-direction: column;
@@ -34,6 +35,7 @@
                     padding: 10px;
                     background-color: $orange;
                     color: white;
+                    cursor: pointer;
                 }
             }
         }

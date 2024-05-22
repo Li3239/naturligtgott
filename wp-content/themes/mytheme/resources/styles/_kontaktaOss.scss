@@ -1,0 +1,79 @@
+.content-kontakt{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    .wp-block-jetpack-contact-form-container {
+        border: 1px solid $orange;
+        padding: 3% 2%;
+        margin-top: 5%;
+        margin-bottom: 5%;
+        width: 30%;
+        background-color: white;
+        .contact-form {
+            .wp-block-jetpack-contact-form{
+                padding: 0;
+                .grunion-field-wrap{
+                    display: flex;
+                    justify-content: left;
+                    flex-direction: column;
+                    label{
+                        text-align: left;
+                    }
+                    input{
+                        padding: 3%;
+                        margin: 10px;
+                        border: none;
+                        margin-left: 0;
+                        background-color:rgb(241, 241, 241);
+                    }
+                    textarea{
+                        border: none;
+                        background-color:rgb(241, 241, 241);
+                        
+                    }
+
+                }
+                .wp-block-button{
+                    button{
+                        width: 100%;
+                        background-color: $orange;
+                        margin-top: 20px;
+                        text-transform: uppercase;
+                        border-radius: 0;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 767.98px) {
+    .content-kontakt{
+        .wp-block-jetpack-contact-form-container{
+            border: 1px solid #ff8a00;
+            padding: 3% 2%;
+            margin-top: 5%;
+            margin-bottom: 5%;
+            width: 90%;
+            background-color: white;
+        }
+
+    }
+  
+
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .content-kontakt{
+        .wp-block-jetpack-contact-form-container{
+            border: 1px solid #ff8a00;
+            padding: 3% 2%;
+            margin-top: 5%;
+            margin-bottom: 5%;
+            width: 90%;
+            background-color: white;
+        }
+
+    }
+}

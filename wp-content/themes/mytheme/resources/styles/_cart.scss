@@ -1,15 +1,15 @@
 
 .content-cart{
-overflow-x: hidden;
-background-color:#F6F6F6 ;
-.woocommerce{
-   padding-top: 5%;
-   padding-bottom: 5%;
-    display: flex;
-    flex-wrap:nowrap;
-    height: auto;
-    width: calc(100% + 40px);
-    background-color: #F6F6F6;
+    overflow-x: hidden;
+    background-color:#F6F6F6 ;
+    .woocommerce{
+      padding-top: 5%;
+     padding-bottom: 5%;
+        display: flex;
+        flex-wrap:nowrap;
+        height: auto;
+        width: calc(100% + 40px);
+        background-color: #F6F6F6;
 
     .woocommerce-cart-form{
        margin-left: 4rem;
@@ -142,6 +142,24 @@ background-color:#F6F6F6 ;
             .wc-block-components-product-image {
                 display: flex;
                 justify-content: center;
+            }
+            .wp-block-button{
+                button{
+                    border-radius: 0;
+                    background-color: $green;
+                }
+                button:hover{
+                    transform: scale(1.1);
+                }
+                span{
+                    .added_to_cart{
+                        color:$orange;
+                    }
+                }
+            }
+            .wp-block-button__link {
+                border-radius: 0;
+                background-color: $green;
             }
         }
     }
