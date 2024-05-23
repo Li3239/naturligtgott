@@ -1,4 +1,34 @@
 .detail {
+  .input-text.qty.text {
+    width: 90px;
+  }
+  .single_add_to_cart_button {
+    padding: 10px 30px;
+    border-radius: 8px;
+
+    background-color: white;
+    cursor: pointer;
+  }
+  .quantity {
+    border: 1px solid #000;
+    margin-right: 10px;
+    border-radius: 8px;
+    width: 100px;
+
+    cursor: pointer;
+    .minus,
+    .plus {
+      cursor: pointer;
+      border: none;
+      background-color: transparent;
+    }
+    .minus {
+      padding-left: 10px;
+    }
+    .plus {
+      padding-right: 10px;
+    }
+  }
   span.onsale {
     display: none;
   }
@@ -162,35 +192,9 @@
               -webkit-appearance: none;
               -moz-appearance: textfield;
             }
-            .single_add_to_cart_button {
-              padding: 10px 30px;
-              border-radius: 8px;
-
-              background-color: white;
-              cursor: pointer;
-            }
-            .quantity {
-              border: 1px solid rgba(0, 0, 0, 0.568);
-              margin-right: 10px;
-              border-radius: 8px;
-
-              cursor: pointer;
-              .minus,
-              .plus {
-                cursor: pointer;
-                border: none;
-                background-color: transparent;
-              }
-              .minus {
-                padding-left: 10px;
-              }
-              .plus {
-                padding-right: 10px;
-              }
-            }
-          }
         }
       }
+    }
     }
     .wc-tabs-wrapper {
       margin-top: -110px;
