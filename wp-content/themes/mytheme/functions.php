@@ -34,3 +34,14 @@ function custom_modify_page_title( $page_title ) {
     // For other pages, return the original page title
     return $page_title;
 }
+/* ///////////////////////////////////////////////////////////////////////// */
+function change_shipping_texts($translated_text, $text, $domain) {
+    // Check the text domain to ensure we only target WooCommerce strings
+    if ($domain === 'woocommerce') {
+        if ($text === 'Enter your address to view shipping options.') {
+            $translated_text = 'Ange din adress för att se fraktalternativ.';
+        }
+    }
+    return $translated_text;
+}
+add_filter('gettext', 'change_shipping_texts', 20, 3);

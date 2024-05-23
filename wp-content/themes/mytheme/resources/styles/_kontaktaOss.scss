@@ -46,6 +46,13 @@
             }
         }
     }
+    .go-back-message{
+        a{
+            color: $orange;
+            border: 1px solid $orange;
+            padding: 10px;
+        }
+    }
 }
 
 @media (max-width: 767.98px) {

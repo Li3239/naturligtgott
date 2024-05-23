@@ -84,3 +84,49 @@ function adjustForAdminBar() {
 
 window.addEventListener("load", adjustForAdminBar);
 window.addEventListener("resize", adjustForAdminBar);
+
+
+document.addEventListener('DOMContentLoaded', function() {
+
+/* -------------------------------------------------------- */
+
+function updateReadMoreLinks() {
+  // Select all 'wp-block-post-excerpt' elements
+  var excerptDivs = document.querySelectorAll('.wp-block-post-excerpt');
+  
+  excerptDivs.forEach(function(excerptDiv) {
+      // Find the empty link element and the "Läs mer…" link within each excerpt
+      var emptyLink = excerptDiv.querySelector('.wp-block-post-excerpt__more-link');
+      var readMoreButton = excerptDiv.querySelector('.wp-block-post-excerpt__more-text a:last-of-type');
+      
+      if (emptyLink && readMoreButton) {
+          // Get the URL from the empty link and set it to the "Läs mer…" button
+          var postLink = emptyLink.getAttribute('href');
+          readMoreButton.setAttribute('href', postLink);
+      }
+  });
+}
+
+updateReadMoreLinks();
+
+/* --------------------------------------------------------------------- */
+function translateShippingText() {
+  // Select the table header element with text 'Shipping'
+  var shippingHeaders = document.querySelectorAll('th');
+
+  shippingHeaders.forEach(function(header) {
+      if (header.textContent.trim() === 'Shipping') {
+          header.textContent = 'Frakt';
+      }
+  });
+
+  // Replace the text inside the data-title attribute
+  var shippingDataTitles = document.querySelectorAll('td[data-title="Shipping"]');
+  
+  shippingDataTitles.forEach(function(td) {
+      td.setAttribute('data-title', 'Frakt');
+  });
+}
+
+document.addEventListener('DOMContentLoaded', translateShippingText);
+});
