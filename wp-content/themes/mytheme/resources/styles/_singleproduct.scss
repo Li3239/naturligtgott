@@ -492,3 +492,10 @@
       color:#000;
     }
   }
+  .detail .woocommerce-product-rating .star-rating .rating,
+  .detail .woocommerce-product-rating .woocommerce-review-link {
+    display: none;
+  }
+  .detail .woocommerce-product-rating span {
+    display: none; // Hide the content within the <span> tag
+  }
