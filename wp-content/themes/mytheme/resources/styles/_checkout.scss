@@ -1,5 +1,6 @@
 body {
     main.content-checkout {
+        background-color: $secondary-background-color;
         .woocommerce {
             display: flex;
             width: 90%;
@@ -7,21 +8,18 @@ body {
             margin: auto;
             flex-direction: column;
             justify-content: center;
-            // margin: 80px 500px;
-
-            // .checkout_coupon {
-
-            // }
-
+            form.checkout_coupon {
+                .input-text {
+                    height: 35px;
+                }
+            }
             .woocommerce-form-coupon-toggle,
             form.woocommerce-checkout {
                 width: 100%;
                 margin: auto;
             }
-
             form.woocommerce-checkout {
                 display: flex;
-
                 .col2-set {
                     width: 55%;
                     margin-right: 30px;
@@ -35,27 +33,22 @@ body {
                                     width: 90% !important;
                                 }
                             }
-
                             h3 {
                                 @include h3-common-font-style;
                             }
-
                             label {
                                 margin-top: 20px;
                                 margin-bottom: 10px;
                                 @include body-common-font-style;
                             }
                         }
-
                         #billing_address_1_field {
                             margin-bottom: 30px;
                         }
                     }
-
                     .col-1,
                     .col-2 {
                         .woocommerce-input-wrapper {
-
                             input,
                             span.select2-selection {
                                 display: inline-block;
@@ -67,24 +60,18 @@ body {
                                 border: 1px solid #9F9F9F
                             }
                         }
-
                     }
-
-                    //Ship to a different address 部分隐藏（已使用add_filter不再check on）
                     .col-2 {
                         display: none;
                     }
                 }
-
                 // your orders & checkout method selection
                 .custom-order-and-checkout {
                     width: 40%;
                 }
-
-                // Country / Region 下拉菜单设定
+                // Country / Region combobox
                 .select2-selection__arrow {
                     position: inherit !important;
-
                     b {
                         left: 26% !important;
                     }
@@ -92,15 +79,14 @@ body {
             }
         }
     }
-
-    // Country / Region 下拉菜单设定
+    // Country / Region combobox
     .select2-dropdown--below {
         width: 212px !important;
     }
 }
 
 // ----------------------
-// checkout klarna 页面
+// checkout klarna page
 // ----------------------
 form.checkout.woocommerce-checkout.kco-checkout {
     #kco-wrapper {
