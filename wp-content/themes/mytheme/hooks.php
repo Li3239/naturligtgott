@@ -71,3 +71,29 @@ function add_custom_rating_pro() {
         echo $output;
     }
 }
+
+add_action( 'woocommerce_single_product_summary', 'add_custom_rating_pro_single', 11 );
+
+function add_custom_rating_pro_single() {
+    global $product;
+
+    if ( $product->get_review_count() > 0 ) {
+        $average_rating = $product->get_average_rating();
+        $rating_count = $product->get_review_count();
+
+        $output = '<div class="woocommerce-product-rating">';
+
+        for ($i = 1; $i <= 5; $i++) {
+            if ($i <= $average_rating) {
+                $output .= '<img src="' . get_template_directory_uri() . '/resources/images/full_star.png" alt="fullstar">';
+            } else if ($i - 0.5 <= $average_rating) {
+                $output .= '<img src="' . get_template_directory_uri() . '/resources/images/half_star.png" alt="halfstar">';
+            } else {
+                $output .= '<img src="' . get_template_directory_uri() . '/resources/images/empty_star.png" alt="emptystar">';
+            }
+        }
+
+        $output .= '</div>';
+        echo $output;
+    }
+}
