@@ -22,6 +22,17 @@
     text-align: left;
     padding-top: 1.5rem !important;
 
+    .wpcp-all-captions {
+      position: relative !important;
+
+      .woocommerce-product-rating {
+        color: #ffe553 !important;
+        position: absolute !important;
+        right: 8% !important;
+        bottom: 48% !important;
+      }
+    }
+
     .wpcp-product-price {
       del {
         color: red;
