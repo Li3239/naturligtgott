@@ -93,3 +93,23 @@ form.checkout.woocommerce-checkout.kco-checkout {
         width: 100% !important;
     }
 }
+
+@media only screen and (max-width: 768px) {
+    body {
+        main.content-checkout {
+            .woocommerce {
+                form.woocommerce-checkout {
+                    flex-wrap: wrap;
+                    height: auto;
+    
+                    #customer_details,
+                    .custom-order-and-checkout {
+                        width: 100%;
+                        margin-left: 0px;
+                        margin-right: 0px;
+                    }
+                }
+            }
+        }
+    }
+}
