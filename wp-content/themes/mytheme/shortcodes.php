@@ -6,7 +6,7 @@
 add_shortcode('live_search', 'live_search_function');
 function live_search_function() { ?>
 
-    <input type="text" name="keyword" id="desktop-keyword" placeholder="Search" onkeyup="desktopFetch()"></input>
+    <input type="text" name="keyword" id="desktop-keyword" placeholder="Sök" onkeyup="desktopFetch()"></input>
 
     <div id="desktop-productfetch"></div>
 
@@ -17,7 +17,7 @@ function live_search_function() { ?>
 add_shortcode('mobile_live_search', 'mobile_live_search_function');
 function mobile_live_search_function() { ?>
 
-    <input type="text" name="keyword" id="mobile-keyword" placeholder="Search" onkeyup="mobileFetch()"></input>
+    <input type="text" name="keyword" id="mobile-keyword" placeholder="Sök" onkeyup="mobileFetch()"></input>
 
     <div id="mobile-productfetch"></div>
 

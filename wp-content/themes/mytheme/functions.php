@@ -40,8 +40,17 @@ function change_shipping_texts($translated_text, $text, $domain) {
     if ($domain === 'woocommerce') {
         if ($text === 'Enter your address to view shipping options.') {
             $translated_text = 'Ange din adress för att se fraktalternativ.';
+        } elseif ($text === 'Free shipping') {
+            $translated_text = 'Fri Frakt';
+        } elseif ($text === 'Shipping') {
+            $translated_text = 'Frakt';
+        } elseif ($text === 'Shipping options will be updated during checkout.') {
+            $translated_text = 'Fraktalternativ kommer att uppdateras vid utcheckning.';
         }
     }
     return $translated_text;
 }
 add_filter('gettext', 'change_shipping_texts', 20, 3);
+
+
+
