@@ -87,46 +87,66 @@ window.addEventListener("resize", adjustForAdminBar);
 
 
 document.addEventListener('DOMContentLoaded', function() {
+  /* -------------------------------------------------------- */
 
-/* -------------------------------------------------------- */
-
-function updateReadMoreLinks() {
-  // Select all 'wp-block-post-excerpt' elements
-  var excerptDivs = document.querySelectorAll('.wp-block-post-excerpt');
-  
-  excerptDivs.forEach(function(excerptDiv) {
+  function updateReadMoreLinks() {
+    // Select all 'wp-block-post-excerpt' elements
+    var excerptDivs = document.querySelectorAll('.wp-block-post-excerpt');
+    
+    excerptDivs.forEach(function(excerptDiv) {
       // Find the empty link element and the "Läs mer…" link within each excerpt
       var emptyLink = excerptDiv.querySelector('.wp-block-post-excerpt__more-link');
       var readMoreButton = excerptDiv.querySelector('.wp-block-post-excerpt__more-text a:last-of-type');
       
       if (emptyLink && readMoreButton) {
-          // Get the URL from the empty link and set it to the "Läs mer…" button
-          var postLink = emptyLink.getAttribute('href');
-          readMoreButton.setAttribute('href', postLink);
+        // Get the URL from the empty link and set it to the "Läs mer…" button
+        var postLink = emptyLink.getAttribute('href');
+        readMoreButton.setAttribute('href', postLink);
       }
-  });
-}
+    });
+  }
 
-updateReadMoreLinks();
+  updateReadMoreLinks();
 
-/* --------------------------------------------------------------------- */
-function translateShippingText() {
-  // Select the table header element with text 'Shipping'
-  var shippingHeaders = document.querySelectorAll('th');
+  /* --------------------------------------------------------------------- */
+  function translateShippingText() {
+    var shippingHeaders = document.querySelectorAll('th');
 
-  shippingHeaders.forEach(function(header) {
+    shippingHeaders.forEach(function(header) {
       if (header.textContent.trim() === 'Shipping') {
-          header.textContent = 'Frakt';
+        header.textContent = 'Frakt';
+        console.log('Shipping header found and changed to Frakt');
       }
-  });
+    });
 
-  // Replace the text inside the data-title attribute
-  var shippingDataTitles = document.querySelectorAll('td[data-title="Shipping"]');
-  
-  shippingDataTitles.forEach(function(td) {
+    var shippingDataTitles = document.querySelectorAll('td[data-title="Shipping"], td[data-title="Frakt"]');
+    
+    shippingDataTitles.forEach(function(td) {
       td.setAttribute('data-title', 'Frakt');
-  });
-}
+      console.log('Shipping data-title found and changed to Frakt');
+    });
 
-document.addEventListener('DOMContentLoaded', translateShippingText);
+    // Change the label text for shipping method
+    var shippingLabels = document.querySelectorAll('label[for^="shipping_method_"]');
+    shippingLabels.forEach(function(label) {
+      if (label.textContent.trim() === 'Free shipping') {
+        label.textContent = 'Fri frakt';
+        console.log('Shipping label found and changed to Fri frakt');
+      }
+    });
+
+
+    // Additional log for debugging
+    if (shippingHeaders.length === 0) {
+      console.log('No table headers found.');
+    }
+    if (shippingDataTitles.length === 0) {
+      console.log('No table data cells with data-title="Shipping" found.');
+    }
+    if (shippingLabels.length === 0) {
+      console.log('No shipping labels found.');
+    }
+  }
+
+  translateShippingText();
 });
