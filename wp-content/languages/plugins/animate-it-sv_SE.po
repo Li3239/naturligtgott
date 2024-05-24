@@ -1,0 +1,204 @@
+# Translation of Plugins - Animate It! - Stable (latest release) in Swedish
+# This file is distributed under the same license as the Plugins - Animate It! - Stable (latest release) package.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2021-08-03 20:37:39+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: GlotPress/4.0.1\n"
+"Language: sv_SE\n"
+"Project-Id-Version: Plugins - Animate It! - Stable (latest release)\n"
+
+#: assets/helper/edsanimate-tinymce-popup.php:506
+msgid "Insert"
+msgstr "Infoga"
+
+#: assets/helper/edsanimate-tinymce-popup.php:504
+msgid "Stop Animation"
+msgstr "Stoppa animation"
+
+#: assets/helper/edsanimate-tinymce-popup.php:500
+msgid "Documentation"
+msgstr "Dokumentation"
+
+#: assets/helper/edsanimate-tinymce-popup.php:497
+msgid "Review Plugin"
+msgstr "Recensera tillägg"
+
+#: assets/helper/edsanimate-tinymce-popup.php:494
+msgid "Powered by"
+msgstr "Drivs med"
+
+#: assets/helper/edsanimate-tinymce-popup.php:477 build/index.js:1
+msgid "Scroll"
+msgstr "Rulla"
+
+#: assets/helper/edsanimate-tinymce-popup.php:475 build/index.js:1
+msgid "Hover"
+msgstr "Hovra"
+
+#: assets/helper/edsanimate-tinymce-popup.php:473 build/index.js:1
+msgid "Click"
+msgstr "Klick"
+
+#: assets/helper/edsanimate-tinymce-popup.php:471 build/index.js:1
+msgid "Load"
+msgstr "Ladda"
+
+#: assets/helper/edsanimate-tinymce-popup.php:460 build/index.js:1
+msgid "Custom CSS Class"
+msgstr "Anpassad CSS-klass"
+
+#: assets/helper/edsanimate-tinymce-popup.php:443 build/index.js:1
+msgid "Infinite"
+msgstr "Oändlig"
+
+#: assets/helper/edsanimate-tinymce-popup.php:442 build/index.js:1
+msgid "Thrice"
+msgstr "Tre gånger"
+
+#: assets/helper/edsanimate-tinymce-popup.php:441 build/index.js:1
+msgid "Twice"
+msgstr "Två gånger"
+
+#: assets/helper/edsanimate-tinymce-popup.php:440 build/index.js:1
+msgid "Once"
+msgstr "En gång"
+
+#: assets/helper/edsanimate-tinymce-popup.php:177
+#: assets/helper/edsanimate-tinymce-popup.php:374 build/index.js:1
+msgid "Duration (in seconds)"
+msgstr "Varaktighet (i sekunder)"
+
+#: assets/helper/edsanimate-tinymce-popup.php:170
+#: assets/helper/edsanimate-tinymce-popup.php:193
+#: assets/helper/edsanimate-tinymce-popup.php:367
+#: assets/helper/edsanimate-tinymce-popup.php:390
+#: assets/helper/edsanimate-tinymce-popup.php:444 build/index.js:1
+msgid "Custom"
+msgstr "Anpassad"
+
+#: assets/helper/edsanimate-tinymce-popup.php:153
+#: assets/helper/edsanimate-tinymce-popup.php:350 build/index.js:1
+msgid "Delay (in seconds)"
+msgstr "Fördröjning (i sekunder)"
+
+#: assets/helper/edsanimate-tinymce-popup.php:46
+#: assets/helper/edsanimate-tinymce-popup.php:157
+#: assets/helper/edsanimate-tinymce-popup.php:243
+#: assets/helper/edsanimate-tinymce-popup.php:354 build/index.js:1
+msgid "None"
+msgstr "Ingen"
+
+#: assets/helper/edsanimate-tinymce-popup.php:42
+#: assets/helper/edsanimate-tinymce-popup.php:239 build/index.js:1
+msgid "Animation"
+msgstr "Animering"
+
+#: assets/helper/edsanimate-tinymce-popup.php:36 build/index.js:1
+msgid "Options"
+msgstr "Alternativ"
+
+#: assets/helper/edsanimate-tinymce-popup.php:33 build/index.js:1
+msgid "Exit"
+msgstr "Avsluta"
+
+#: edsanimate.php:567
+msgid "Settings"
+msgstr "Inställningar"
+
+#: edsanimate.php:304
+msgid "Submit"
+msgstr "Skicka"
+
+#: edsanimate.php:296
+msgid "Custom CSS"
+msgstr "Anpassad CSS"
+
+#: edsanimate.php:285
+msgid "Hide Vertical Scrollbar"
+msgstr "Dölj vertikal rullningslist"
+
+#: edsanimate.php:274
+msgid "Hide Horizontal Scrollbar"
+msgstr "Dölj horisontell rullningslist"
+
+#: edsanimate.php:263
+msgid "Enable on Tablets"
+msgstr "Aktivera på läsplattor"
+
+#: assets/helper/edsanimate-tinymce-popup.php:456 edsanimate.php:257
+#: edsanimate.php:268 edsanimate.php:279 edsanimate.php:290 build/index.js:1
+msgid "No"
+msgstr "Nej"
+
+#: assets/helper/edsanimate-tinymce-popup.php:454 edsanimate.php:256
+#: edsanimate.php:267 edsanimate.php:278 edsanimate.php:289 build/index.js:1
+msgid "Yes"
+msgstr "Ja"
+
+#: edsanimate.php:252
+msgid "Enable on Smartphones"
+msgstr "Aktivera på smarta telefoner"
+
+#: edsanimate.php:222
+msgid "Failed to save options."
+msgstr "Misslyckades att spara alternativ."
+
+#: edsanimate.php:216
+msgid "Options saved."
+msgstr "Alternativ sparade."
+
+#: edsanimate.php:108 edsanimate.php:182
+msgid "Animate It! Options"
+msgstr "Alternativ för Animate It!"
+
+#. Author of the plugin
+#: edsanimate.php
+msgid "eLEOPARD Design Studios"
+msgstr "eLEOPARD Design Studios"
+
+#. Plugin URI of the plugin
+#. Author URI of the plugin
+#: edsanimate.php
+msgid "http://www.eleopard.in"
+msgstr "http://www.eleopard.in"
+
+#. Plugin Name of the plugin
+#: edsanimate.php assets/helper/edsanimate-tinymce-popup.php:505
+#: edsanimate.php:109 build/index.js:1
+msgid "Animate It!"
+msgstr "Animate It!"
+
+#: assets/helper/edsanimate-tinymce-popup.php:468 build/index.js:1
+msgid "Animate On"
+msgstr "Animera på"
+
+#: assets/helper/eds-tinymce-plugin-langs.php:12
+#: assets/helper/edsanimate-tinymce-popup.php:8
+msgid "Select your Animation Style"
+msgstr "Välj stil på din animation."
+
+#. Description of the plugin
+#: edsanimate.php
+msgid "Add cool CSS3 animations to your content."
+msgstr "Lägg till coola CSS3-animeringar till ditt innehåll."
+
+#: assets/helper/edsanimate-tinymce-popup.php:451 build/index.js:1
+msgid "Keep Element Final State"
+msgstr "Behåll elementets slutliga tillstånd"
+
+#: assets/helper/edsanimate-tinymce-popup.php:436 build/index.js:1
+msgid "Animation Repeat"
+msgstr "Repetera animering"
+
+#: assets/helper/edsanimate-tinymce-popup.php:200
+#: assets/helper/edsanimate-tinymce-popup.php:397 build/index.js:1
+msgid "Timing"
+msgstr "Tidinställning"
+
+#: assets/helper/edsanimate-tinymce-popup.php:30 build/index.js:1
+msgid "Entry"
+msgstr "Inlägg"
