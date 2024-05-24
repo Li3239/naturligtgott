@@ -98,18 +98,19 @@
             .actions {
               border: none;
               .coupon {
+                display: flex;
+                justify-content: left;
+                flex-direction: row;
                 #coupon_code {
-                  position: relative;
                   border: none;
-                  width: 23rem;
+                  width: 80%;
                   padding: 0.7rem 1rem;
                   border: 1px solid black;
                 }
                 button {
+                  width: 20%;
                   border-radius: 0;
                   padding: 0.7rem 1rem;
-                  position: absolute;
-                  right: 90px;
                   z-index: 1;
                   background-color: black;
                   border: 1px solid black;
@@ -125,7 +126,7 @@
           .checkout-button {
             width: 90%;
             text-align: center;
-            background-color: black;
+            background-color:$orange;
             border-radius: 0;
             padding: 0.7rem 1rem;
           }
@@ -244,38 +245,56 @@
         }
         .shop_table {
           padding-left: 0;
+         
           tbody {
+            display:flex;
+            justify-content: center;
+            flex-direction: column;
+            padding-right:5%;
             tr {
               .actions {
                 padding-left: 0;
                 .coupon {
-                  padding-left: 3%;
-                  position: relative;
-                  max-width: 300px;
-                  text-align: left;
-                  #coupon_code {
-                    max-width: 300px;
+                    display: flex;
+                    justify-content: left;
+                    flex-direction: row;
+                    #coupon_code {
+                      border: none;
+                      width: 65%;
+                      padding: 0.7rem 1rem;
+                      border: 1px solid black;
+                    }
+                    button {
+                      width: 20%;
+                      border-radius: 0;
+                      padding: 0.7rem 1rem;
+                      z-index: 1;
+                      background-color: black;
+                      border: 1px solid black;
+                      color: #fff;
+                    }
                   }
-                  button {
-                    position: absolute;
-                    top: 0;
-                    right: -40px;
-                  }
-                }
               }
             }
             .cart-subtotal {
-              padding-right: 10px;
+              padding-right:5%;
               td {
                 width: 90%;
               }
             }
+            .shipping{
+                width: 95%;
+              }
+              .order-total{
+                width: 95%;
+              }
           }
         }
         .wc-proceed-to-checkout {
           justify-content: center;
           width: 90%;
           a {
+            background-color:$orange;
             max-width: 310px;
           }
         }
@@ -369,37 +388,50 @@
 
       .shop_table {
         padding-left: 0;
-
+       
         tbody {
+            display:flex;
+            justify-content: center;
+            flex-direction: column;
           tr {
             .actions {
               padding-left: 0;
 
               .coupon {
-                padding-left: 3%;
-                position: relative;
-                max-width: 300px;
-                text-align: left;
-
+                display: flex;
+                justify-content: left;
+                flex-direction: row;
                 #coupon_code {
-                  max-width: 300px;
+                  border: none;
+                  width: 65%;
+                  padding: 0.7rem 1rem;
+                  border: 1px solid black;
                 }
-
                 button {
-                  position: absolute;
-                  top: 0;
-                  right: -40px;
+                  width: 20%;
+                  border-radius: 0;
+                  padding: 0.7rem 1rem;
+                  z-index: 1;
+                  background-color: black;
+                  border: 1px solid black;
+                  color: #fff;
                 }
               }
             }
           }
 
           .cart-subtotal {
-            padding-right: 10px;
+            padding-right:5%;
 
             td {
               width: 90%;
             }
+          }
+          .shipping{
+            width: 95%;
+          }
+          .order-total{
+            width: 95%;
           }
         }
       }
@@ -409,7 +441,9 @@
         width: 90%;
 
         a {
-          max-width: 310px;
+            background-color:$orange;
+         /*  max-width: 310px; */
+          max-width: 80%;
         }
       }
     }

@@ -32,6 +32,9 @@
           a {
             color: #121212;
           }
+          a:hover {
+            color: $green;
+          }
         }
       }
       .entry-content {
@@ -46,6 +49,9 @@
           color: #121212;
           font-weight: bold;
         }
+        .read-more:hover {
+            color: $green;
+          }
       }
       .entry-meta {
         padding: 5%;
