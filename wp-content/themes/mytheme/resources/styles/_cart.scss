@@ -16,6 +16,14 @@
 
       .woocommerce-message {
         background-color: #ffffffd6;
+        .woocommerce-info{
+          border-top-color:$orange !important;
+        }
+        .return-to-shop{
+          a{
+            background-color:$orange !important;
+          }
+        }
       }
     }
 
