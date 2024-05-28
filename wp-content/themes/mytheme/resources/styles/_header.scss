@@ -27,54 +27,6 @@ body.admin-bar #stickyheading {
     nav #secondary-menu {
       padding-left: 0;
     }
-    .search_input {
-      right: 18%;
-      z-index: 10;
-      position: absolute;
-      input {
-        padding: 0.5rem;
-        font-weight: 500;
-        letter-spacing: 0.5px;
-        box-shadow: 0 6px 12px rgba(55, 55, 55, 0.2);
-        border: unset;
-        border-radius: 5px;
-        width: 10rem;
-
-        &:focus {
-          outline: none;
-        }
-      }
-      #desktop-productfetch {
-        top: 11rem;
-        position: absolute;
-        width: 150vh;
-        left: -40rem;
-        background-color: #f0fffff7;
-        z-index: 2000;
-        display: flex;
-        flex-wrap: wrap;
-        gap: 0 2rem;
-        padding: 0 2rem;
-
-        .product-li {
-          margin: 2rem auto;
-          width: calc(50% - 8rem);
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          gap: 1rem;
-          padding: 2rem;
-          background-color: #ffffffd4;
-          border-radius: 5px;
-          box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-
-          h3 a {
-            color: #222222;
-            letter-spacing: 0.5px;
-          }
-        }
-      }
-    }
     .burger-menu-div {
       display: none;
     }
@@ -212,6 +164,61 @@ body.admin-bar #stickyheading {
 
 .mobile-menu.show {
   left: 0;
+}
+
+.search_input {
+  right: 17%;
+  z-index: 1000;
+  position: absolute;
+  top: 3.5%;
+  input {
+    padding: 0.5rem;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    box-shadow: 0 6px 12px rgba(55, 55, 55, 0.2);
+    border: unset;
+    border-radius: 5px;
+    width: 10rem;
+
+    &:focus {
+      outline: none;
+    }
+  }
+  #desktop-productfetch {
+    top: 11rem;
+    position: absolute;
+    width: 150vh;
+    left: -420%;
+    background-color: #f0fffff7;
+    z-index: 10;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0 2rem;
+    padding: 0 2rem;
+    transform: translateZ(0);
+
+    .product-li {
+      margin: 2rem auto;
+      width: calc(50% - 8rem);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+      padding: 2rem;
+      background-color: #ffffffd4;
+      border-radius: 5px;
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+
+      h3 a {
+        color: #222222;
+        letter-spacing: 0.5px;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
 }
 
 .mobile-menu {

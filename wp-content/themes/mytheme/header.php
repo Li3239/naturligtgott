@@ -42,9 +42,6 @@
         <div class="mobile-search-input">
             <?php echo do_shortcode('[mobile_live_search]'); ?>
         </div>
-
-
-
     </div>
 
     <header id="stickyheading" class="header nav-head">
@@ -67,9 +64,6 @@
         </div>
         <!-- Main menu icons -->
         <div class="menu-logo-div">
-            <div class="search_input" style="display: none;">
-                <?php echo do_shortcode('[live_search]'); ?>
-            </div>
             <?php
             $menu = array(
                 'theme_location' => 'main_menu_icons',
@@ -109,4 +103,7 @@
         <span><i class="fa-solid fa-truck"></i>Gratis leverens över 300SEK</span>
         <span><i class="fa-regular fa-face-smile"></i>30 dagar retur</span>
         <span><i class="fa-regular fa-credit-card"></i>Snabbt leverens</span>
+    </div>
+    <div class="search_input" style="display: none;">
+        <?php echo do_shortcode('[live_search]'); ?>
     </div>
